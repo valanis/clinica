@@ -11,10 +11,12 @@ public class Doctor extends Empleado {
 
     public Doctor() {
         this.setSueldoBasico(SUELDO);
+        this.consultasAtendidas = new ArrayList<Consulta>();
     }
 
     public Doctor(Long sueldo) {
         this.setSueldoBasico(sueldo);
+        this.consultasAtendidas = new ArrayList<Consulta>();
     }
 
     public ArrayList<Consulta> getConsultasAtendidas() {
