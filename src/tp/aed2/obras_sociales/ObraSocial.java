@@ -2,22 +2,27 @@ package tp.aed2.obras_sociales;
 
 public class ObraSocial {
 
-    private Long id;
-    private Long porcentajeDescuento;
+    private String id;
+    private Integer porcentajeDescuento;
 
-    public Long getId() {
+    public ObraSocial(String id, Integer porcentaje) {
+        this.id = id;
+        this.porcentajeDescuento = porcentaje;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getPorcentajeDescuento() {
+    public Integer getPorcentajeDescuento() {
         return porcentajeDescuento;
     }
 
-    public void setPorcentajeDescuento(Long porcentajeDescuento) {
+    public void setPorcentajeDescuento(Integer porcentajeDescuento) {
         this.porcentajeDescuento = porcentajeDescuento;
     }
 

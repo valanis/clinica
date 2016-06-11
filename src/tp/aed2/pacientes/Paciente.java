@@ -1,10 +1,7 @@
 package tp.aed2.pacientes;
 
-import tp.aed2.obras_sociales.ObraSocial;
+public abstract class Paciente {
 
-public class Paciente {
 
-    private Integer edad;
-    private ObraSocial os;
 
 }
