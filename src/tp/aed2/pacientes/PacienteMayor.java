@@ -8,4 +8,9 @@ public class PacienteMayor extends Paciente {
         super(os, dni, edad);
     }
 
+    @Override
+    public Boolean esMayorDeEdad() {
+        return true;
+    }
+
 }

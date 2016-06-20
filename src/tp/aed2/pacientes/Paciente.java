@@ -28,6 +28,8 @@ public abstract class Paciente {
     }
 
     //Métodos
+    abstract public Boolean esMayorDeEdad();
+
     @Override
     public String toString() {
         return "[DNI: "+this.getDni()+", Edad: "+this.getEdad()+ ", ObraSocial: "+this.getOs()+"]";
