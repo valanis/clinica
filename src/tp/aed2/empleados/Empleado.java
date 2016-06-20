@@ -1,14 +1,16 @@
 package tp.aed2.empleados;
 
+import java.math.BigDecimal;
+
 public abstract class Empleado {
 
-    private Long sueldoBasico;
+    private BigDecimal sueldoBasico;
 
-    public Long getSueldoBasico() {
+    public BigDecimal getSueldoBasico() {
         return sueldoBasico;
     }
 
-    public void setSueldoBasico(Long sueldoBasico) {
+    public void setSueldoBasico(BigDecimal sueldoBasico) {
         this.sueldoBasico = sueldoBasico;
     }
 }

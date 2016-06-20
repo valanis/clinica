@@ -2,30 +2,68 @@ package tp.aed2.consultas;
 
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.pacientes.Paciente;
-import tp.aed2.pacientes.PacienteConCobertura;
-import tp.aed2.pacientes.PacienteSinCoberturaMayor;
-import tp.aed2.pacientes.PacienteSinCoberturaMenor;
+import tp.aed2.pacientes.PacienteMenor;
+
+import java.math.BigDecimal;
 
 public class Consulta {
 
-    private static final Long VALOR_BASE = Long.valueOf(100);
+    //Constantes
+    private static final BigDecimal VALOR_BASE = new BigDecimal(100);
+    private static final BigDecimal CIEN = new BigDecimal(100);
 
-    Long valor;
-    Paciente paciente;
+    //Atributos
+    private Paciente paciente;
+    private BigDecimal valor;
 
-    public Consulta(PacienteConCobertura paciente) {
-        Integer porcentaje = paciente.getOs().getPorcentajeDescuento();
-        this.valor = VALOR_BASE - (VALOR_BASE * porcentaje / 100);
+    //Constructores
+    /**
+     * Crea una consulta para un paciente (con o sin cobertura),
+     * calcula el valor de la consulta.
+     * @param paciente
+     */
+    public Consulta(Paciente paciente) {
         this.paciente = paciente;
+        this.valor = cotizar(paciente);
     }
 
-    public Consulta(PacienteSinCoberturaMayor paciente) {
-        this.valor = VALOR_BASE;
+    /**
+     * Crea una consulta para un paciente menor de edad, sin cobertura.
+     * Se llama al empleado administrativo para que cotice la consulta.
+     * @param paciente necesariamente menor de edad
+     * @param admin empleado administrativo.
+     */
+    public Consulta(PacienteMenor paciente, Administrativo admin) {
         this.paciente = paciente;
-    }
-
-    public Consulta(PacienteSinCoberturaMenor paciente, Administrativo admin) {
         this.valor = admin.cotizarConsulta(paciente);
-        this.paciente = paciente;
     }
+
+    //Getters
+    public Paciente getPaciente() {
+        return this.paciente;
+    }
+
+    public BigDecimal getValor() {
+        return this.valor;
+    }
+
+    //Métodos
+    /** Devuelve el valor de la consulta, fórmula:
+     * valor_base - (valor_base * porcentaje_desc_os / 100)
+     * Si el paciente no tiene OS, porcentaje_desc_os es 0,
+     * y el valor de la consulta queda igual al valor_base.
+     * @param paciente
+     * @return el valor de la consulta
+     */
+    private BigDecimal cotizar(Paciente paciente) {
+        BigDecimal porcentaje = paciente.getOs().getPorcentajeDescuento();
+        BigDecimal descuento = VALOR_BASE.multiply(porcentaje.divide(CIEN));
+        return VALOR_BASE.subtract(descuento);
+    }
+
+    @Override
+    public String toString(){
+        return "[Valor:"+this.getValor()+", Paciente:"+this.getPaciente()+"]";
+    }
+
 }
