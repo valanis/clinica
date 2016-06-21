@@ -35,6 +35,11 @@ public class Main {
         Consulta consultaPacienteNoCubiertoMayor = ConsultaFactory.getConsulta(pacienteNoCubiertoMayor);
         Consulta consultaPacienteNoCubiertoMenor = ConsultaFactory.getConsulta(pacienteNoCubiertoMenor);
 
+        System.out.println(consultaPacienteCubiertoMayor);
+        System.out.println(consultaPacienteCubiertoMenor);
+        System.out.println(consultaPacienteNoCubiertoMayor);
+        System.out.println(consultaPacienteNoCubiertoMenor);
+
         DateTime llegada = new DateTime(2016,06,18,9,0,0);
         DateTime salida = new DateTime(2016,06,18,18,0,0);
 
