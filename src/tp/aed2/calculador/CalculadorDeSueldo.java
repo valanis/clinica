@@ -1,24 +1,20 @@
 package tp.aed2.calculador;
 
-import org.joda.time.DateTime;
-import org.joda.time.Duration;
 import tp.aed2.consultas.Consulta;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
 import tp.aed2.excepciones.SueldoNegativoException;
+import tp.aed2.fichaje.Fichaje;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CalculadorDeSueldo {
 
     //Constantes
     private static final BigDecimal VALOR_HORA = new BigDecimal(10);
     private static final BigDecimal VALOR_COTIZACION = new BigDecimal(50);
-    private static final Integer HORAS_A_TRABAJAR = 9;
 
     /**
      * Calcula el sueldo para el corriente mes de un empleado doctor
@@ -54,63 +50,22 @@ public class CalculadorDeSueldo {
     }
 
     /**
-     * Calcula la cantidad de horas no trabajadas por un Empleado Administrativo.
-     * El Empleado debería trabajar todos los días del mes, de 9 a 18 horas.
-     * En caso de que haya fichado solo entrada (y no salida) se le descuenta el día.
      * @param admin Empleado Administrativo
-     * @return cantidad de horas no trabajadas en el mes
+     * @return el monto que se le debe descontar al sueldo por hora no trabajada
      * @throws tp.aed2.excepciones.EmpleadoNoTrabajoException si el empleado no trabajó ningún día el mes.
      */
     private BigDecimal obtenerDescuentoPorHorasNoTrabajadas(Administrativo admin) throws EmpleadoNoTrabajoException {
-        HashMap<Integer, ArrayList<DateTime>> fichaje = admin.getFichaje();
-        Integer diasDelMes = fichaje.size();
-        Integer diasNoTrabajados = 0;
-        Integer horasNoTrabajadas = 0;
-        for(int dia = 1; dia <= diasDelMes; dia++) {
-            ArrayList fichajeDelDia = fichaje.get(dia);
-            if(diaNoTrabajado(fichajeDelDia)) {
-                horasNoTrabajadas += this.HORAS_A_TRABAJAR;
-                diasNoTrabajados++;
-            } else if(diaNoFichado(fichajeDelDia)) {
-                horasNoTrabajadas += this.HORAS_A_TRABAJAR;
-            } else {
-                horasNoTrabajadas += horasNoTrabajadasDelDia(fichajeDelDia);
-            }
-        }
+        Fichaje fichaje = admin.getFichaje();
+        Integer horasNoTrabajadas = fichaje.obtenerHorasNoTrabajadas();
+        Integer diasDelMes = fichaje.getCantidadDeDias();
 
-        if(diasNoTrabajados == diasDelMes) {
-            throw new EmpleadoNoTrabajoException();
-        }
+        Integer horasATrabajar = diasDelMes * fichaje.getHorasATrabajar();
 
-        Integer horasTotales = diasDelMes * this.HORAS_A_TRABAJAR;
-
-        if(horasNoTrabajadas == horasTotales) {
+        if(horasNoTrabajadas == horasATrabajar) {
             throw new EmpleadoNoTrabajoException();
         }
 
         return this.VALOR_HORA.multiply(new BigDecimal(horasNoTrabajadas));
-    }
-
-    private Boolean diaNoTrabajado(ArrayList<DateTime> fichajeDelDia) {
-        return fichajeDelDia.size() == 0;
-    }
-
-    private Boolean diaNoFichado(ArrayList<DateTime> fichajeDelDia) {
-        return fichajeDelDia.size() == 1;
-    }
-
-
-    /**
-     * Devuelve la cantidad de horas no trabajadas en el día
-     * @param fichajeDelDia
-     * @return valores posibles: de 0 a 9
-     */
-    private Integer horasNoTrabajadasDelDia(ArrayList<DateTime> fichajeDelDia) {
-        DateTime entrada = fichajeDelDia.get(0);
-        DateTime salida = fichajeDelDia.get(1);
-        Integer horasTrabajadas = ((Long)new Duration(entrada, salida).getStandardHours()).intValue();
-        Integer horasNoTrabajadas = this.HORAS_A_TRABAJAR - horasTrabajadas;
-        return (horasNoTrabajadas <= 0) ? 0 : horasNoTrabajadas;
     }
 
     public BigDecimal calcular(Camillero camillero) {

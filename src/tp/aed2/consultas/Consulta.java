@@ -10,6 +10,7 @@ public class Consulta {
 
     //Constantes
     private static final BigDecimal VALOR_BASE = new BigDecimal(100);
+    private static final BigDecimal VALOR_MENORES_SIN_OS = new BigDecimal(75);
     private static final BigDecimal CIEN = new BigDecimal(100);
 
     //Atributos
@@ -35,7 +36,7 @@ public class Consulta {
      */
     public Consulta(PacienteMenor paciente, Administrativo admin) {
         this.paciente = paciente;
-        this.valor = admin.cotizarConsulta(paciente);
+        this.valor = admin.cotizarConsulta(paciente, VALOR_MENORES_SIN_OS);
     }
 
     //Getters
@@ -45,6 +46,14 @@ public class Consulta {
 
     public BigDecimal getValor() {
         return this.valor;
+    }
+
+    public BigDecimal getValorBase() {
+        return this.VALOR_BASE;
+    }
+
+    public BigDecimal getValorParaMenoresSinOS() {
+        return this.VALOR_MENORES_SIN_OS;
     }
 
     //Métodos
@@ -63,7 +72,7 @@ public class Consulta {
 
     @Override
     public String toString(){
-        return "[Valor:"+this.getValor()+", Paciente:"+this.getPaciente()+"]";
+        return "[[Consulta] Valor:"+this.getValor()+", Paciente:"+this.getPaciente()+"]";
     }
 
 }

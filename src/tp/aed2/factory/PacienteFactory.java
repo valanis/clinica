@@ -9,7 +9,7 @@ import tp.aed2.pacientes.PacienteMenor;
 public class PacienteFactory {
 
     public static Paciente getPaciente(Integer dni, Integer edad) {
-        return getPaciente(dni, edad, new NullObraSocial());
+        return getPaciente(dni, edad, NullObraSocial.getInstance());
     }
 
     public static Paciente getPaciente(Integer dni, Integer edad, ObraSocial os) {
