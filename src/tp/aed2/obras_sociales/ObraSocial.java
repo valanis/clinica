@@ -2,16 +2,16 @@ package tp.aed2.obras_sociales;
 
 import java.math.BigDecimal;
 
-public class ObraSocial {
+public class ObraSocial implements IObraSocial {
 
     //Atributps
     private String id;
-    private BigDecimal porcentajeDescuento;
+    private BigDecimal porcentaje;
 
     //Constructor
     public ObraSocial(String id, BigDecimal porcentaje) {
         this.id = id;
-        this.porcentajeDescuento = porcentaje;
+        this.porcentaje = porcentaje;
     }
 
     //Getters
@@ -19,18 +19,18 @@ public class ObraSocial {
         return id;
     }
 
-    public BigDecimal getPorcentajeDescuento() {
-        return porcentajeDescuento;
+    public BigDecimal getPorcentaje() {
+        return porcentaje;
     }
 
     //Métodos
-    @Override
-    public String toString() {
-        return "[ID: "+this.getId()+", porcentaje: "+this.getPorcentajeDescuento()+"]";
-    }
-
     public Boolean cubre() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "[ID: "+this.getId()+", porcentaje: "+this.getPorcentaje()+"]";
     }
 
 }

@@ -14,9 +14,10 @@ public class PacienteFactoryTest {
     private static final Integer EDAD_MAYOR = 18;
     private static final Integer DNI = 1;
     private static final String OS = "OSDE";
-    private static final String NULL_OS = NullObraSocial.getNullId();
+    private static final NullObraSocial NULL_OBRA_SOCIAL = NullObraSocial.getInstance();
+    private static final String NULL_OS = NULL_OBRA_SOCIAL.getId();
     private static final BigDecimal PORCENTAJE = new BigDecimal(1.5);
-    private static final BigDecimal NULL_PORCENTAJE = NullObraSocial.getNullPorcentaje();
+    private static final BigDecimal NULL_PORCENTAJE = NULL_OBRA_SOCIAL.getPorcentaje();
 
     @Test
     public void getPacienteMenorDeEdadSinObraSocial() {
@@ -25,7 +26,7 @@ public class PacienteFactoryTest {
         assertEquals(paciente.getEdad(), EDAD_MENOR);
         assertEquals(paciente.esMayorDeEdad(), false);
         assertEquals(paciente.getOs().getId(), NULL_OS);
-        assertEquals(paciente.getOs().getPorcentajeDescuento(), NULL_PORCENTAJE);
+        assertEquals(paciente.getOs().getPorcentaje(), NULL_PORCENTAJE);
         assertEquals(paciente.getOs().cubre(), false);
     }
 
@@ -37,7 +38,7 @@ public class PacienteFactoryTest {
         assertEquals(paciente.getEdad(), EDAD_MENOR);
         assertEquals(paciente.esMayorDeEdad(), false);
         assertEquals(paciente.getOs().getId(), OS);
-        assertEquals(paciente.getOs().getPorcentajeDescuento(), PORCENTAJE);
+        assertEquals(paciente.getOs().getPorcentaje(), PORCENTAJE);
         assertEquals(paciente.getOs().cubre(), true);
     }
 
@@ -48,7 +49,7 @@ public class PacienteFactoryTest {
         assertEquals(paciente.getEdad(), EDAD_MAYOR);
         assertEquals(paciente.esMayorDeEdad(), true);
         assertEquals(paciente.getOs().getId(), NULL_OS);
-        assertEquals(paciente.getOs().getPorcentajeDescuento(), NULL_PORCENTAJE);
+        assertEquals(paciente.getOs().getPorcentaje(), NULL_PORCENTAJE);
         assertEquals(paciente.getOs().cubre(), false);
     }
 
@@ -60,7 +61,7 @@ public class PacienteFactoryTest {
         assertEquals(paciente.getEdad(), EDAD_MAYOR);
         assertEquals(paciente.esMayorDeEdad(), true);
         assertEquals(paciente.getOs().getId(), OS);
-        assertEquals(paciente.getOs().getPorcentajeDescuento(), PORCENTAJE);
+        assertEquals(paciente.getOs().getPorcentaje(), PORCENTAJE);
         assertEquals(paciente.getOs().cubre(), true);
     }
 }

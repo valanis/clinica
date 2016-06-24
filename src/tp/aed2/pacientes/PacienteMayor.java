@@ -1,10 +1,10 @@
 package tp.aed2.pacientes;
 
-import tp.aed2.obras_sociales.ObraSocial;
+import tp.aed2.obras_sociales.IObraSocial;
 
 public class PacienteMayor extends Paciente {
 
-    public PacienteMayor(ObraSocial os, Integer dni, Integer edad){
+    public PacienteMayor(IObraSocial os, Integer dni, Integer edad){
         super(os, dni, edad);
     }
 

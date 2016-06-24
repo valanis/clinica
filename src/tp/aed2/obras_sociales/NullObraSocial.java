@@ -2,7 +2,8 @@ package tp.aed2.obras_sociales;
 
 import java.math.BigDecimal;
 
-public class NullObraSocial extends ObraSocial {
+//Singleton
+public class NullObraSocial implements IObraSocial  {
 
     //Constantes
     private static final String NAME = "NO_OS";
@@ -11,9 +12,7 @@ public class NullObraSocial extends ObraSocial {
     private static NullObraSocial instance;
 
     //Constructor
-    private NullObraSocial() {
-        super(NAME, CERO);
-    }
+    private NullObraSocial() {}
 
     //Métodos
     public static NullObraSocial getInstance() {
@@ -23,13 +22,16 @@ public class NullObraSocial extends ObraSocial {
         return instance;
     }
 
-    @Override
+    public String getId() {
+        return NAME;
+    }
+
+    public BigDecimal getPorcentaje() {
+        return CERO;
+    }
+
     public Boolean cubre() {
         return false;
     }
-
-    public static String getNullId() { return NAME; }
-
-    public static BigDecimal getNullPorcentaje() { return CERO; }
 
 }

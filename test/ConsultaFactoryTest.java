@@ -24,8 +24,7 @@ public class ConsultaFactoryTest {
 
     @After
     public void reiniciarClinica() {
-        Clinica clinica = Clinica.getInstance();
-        clinica.reiniciar();
+        Clinica.getInstance().reiniciar();
     }
 
     @Test

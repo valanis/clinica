@@ -5,26 +5,31 @@ import tp.aed2.consultas.Consulta;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class Doctor extends Empleado {
+public class Doctor implements IEmpleado {
 
-    private static final BigDecimal SUELDO = new BigDecimal(50000);
+    //Constantes
+    private static final BigDecimal SUELDO_BASICO = new BigDecimal(50000);
 
-    ArrayList<Consulta> consultasAtendidas;
+    //Atributos
+    private BigDecimal sueldoBasico;
+    private ArrayList<Consulta> consultasAtendidas;
 
+    //Constructor
     public Doctor() {
-        this.setSueldoBasico(SUELDO);
+        this.sueldoBasico = SUELDO_BASICO;
         this.consultasAtendidas = new ArrayList<Consulta>();
     }
 
-    public Doctor(BigDecimal sueldo) {
-        this.setSueldoBasico(sueldo);
-        this.consultasAtendidas = new ArrayList<Consulta>();
+    //Getters
+    public BigDecimal getSueldoBasico() {
+        return this.sueldoBasico;
     }
 
     public ArrayList<Consulta> getConsultasAtendidas() {
         return consultasAtendidas;
     }
 
+    //Métodos
     public void atender(Consulta consulta) {
         this.consultasAtendidas.add(consulta);
     }

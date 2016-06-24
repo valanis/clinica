@@ -5,7 +5,6 @@ import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
-import tp.aed2.excepciones.SueldoNegativoException;
 import tp.aed2.fichaje.Fichaje;
 
 import java.math.BigDecimal;
@@ -27,6 +26,14 @@ public class LiquidadorDeSueldo {
         return instance;
     }
 
+    public BigDecimal getValorCotizacion() {
+        return this.VALOR_COTIZACION;
+    }
+
+    public BigDecimal getValorHora() {
+        return this.VALOR_HORA;
+    }
+
     /**
      * Calcula el sueldo para el corriente mes de un empleado doctor
      * @param doctor
@@ -36,24 +43,17 @@ public class LiquidadorDeSueldo {
     public BigDecimal calcular(Doctor doctor) {
         BigDecimal sueldo = doctor.getSueldoBasico();
         for(Consulta consulta : doctor.getConsultasAtendidas()) {
-            sueldo.add(consulta.getValor());
+            sueldo = sueldo.add(consulta.getValor());
         }
         return sueldo;
     }
 
-    public BigDecimal calcular(Administrativo admin)
-            throws EmpleadoNoTrabajoException, SueldoNegativoException {
+    public BigDecimal calcular(Administrativo admin) throws EmpleadoNoTrabajoException {
         BigDecimal sueldo = admin.getSueldoBasico();
         BigDecimal plusPorCotizaciones = obtenerValorDeCotizaciones(admin);
         BigDecimal descuentoPorHorasNoTrabajadas =  obtenerDescuentoPorHorasNoTrabajadas(admin);
 
-        BigDecimal resultado = sueldo.add(plusPorCotizaciones).subtract(descuentoPorHorasNoTrabajadas);
-
-        if(resultado.compareTo(BigDecimal.ZERO) < 0){
-            throw new SueldoNegativoException();
-        }
-
-        return resultado;
+        return sueldo.add(plusPorCotizaciones).subtract(descuentoPorHorasNoTrabajadas);
     }
 
     private BigDecimal obtenerValorDeCotizaciones(Administrativo admin) {
@@ -72,7 +72,7 @@ public class LiquidadorDeSueldo {
 
         Integer horasATrabajar = diasDelMes * fichaje.getHorasATrabajar();
 
-        if(horasNoTrabajadas == horasATrabajar) {
+        if(horasNoTrabajadas.equals(horasATrabajar)) {
             throw new EmpleadoNoTrabajoException();
         }
 

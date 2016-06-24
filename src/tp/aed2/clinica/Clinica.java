@@ -1,10 +1,11 @@
 package tp.aed2.clinica;
 
-import tp.aed2.liquidador.LiquidadorDeSueldo;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
-import tp.aed2.excepciones.NoHayAdministrativoException;
+import tp.aed2.excepciones.NoHayEmpleadoException;
+import tp.aed2.liquidador.LiquidadorDeSueldo;
+import tp.aed2.sat.Sat;
 
 import java.util.ArrayList;
 
@@ -15,12 +16,14 @@ public class Clinica {
     private ArrayList<Doctor> doctores;
     private ArrayList<Administrativo> administrativos;
     private ArrayList<Camillero> camilleros;
+    private Sat sat;
     private LiquidadorDeSueldo liquidadorDeSueldo;
 
     private Clinica() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
         this.camilleros = new ArrayList();
+        this.sat = Sat.getInstance();
         this.liquidadorDeSueldo = LiquidadorDeSueldo.getInstance();
     }
 
@@ -39,27 +42,33 @@ public class Clinica {
         this.administrativos.add(administrativo);
     }
 
+    /**
+     * @param camillero
+     * Agregar al empleado a la lista de camilleros,
+     * a la lista de suscriptores del SAT
+     */
     public void agregarCamillero(Camillero camillero) {
         this.camilleros.add(camillero);
+        this.sat.agregarSuscriptor(camillero);
     }
 
     public void reiniciar() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
         this.camilleros = new ArrayList();
+        this.sat.reiniciar();
     }
 
     /**
      * @return un empleado administrativo al azar
-     * @throws NoHayAdministrativoException cuando no hay administrativos
+     * @throws tp.aed2.excepciones.NoHayEmpleadoException cuando no hay administrativos
      */
-    public Administrativo getAdministrativo() throws NoHayAdministrativoException {
-        if(this.administrativos.isEmpty()) {
-            throw new NoHayAdministrativoException();
+    public Administrativo getAdministrativo() throws NoHayEmpleadoException {
+        if(administrativos.isEmpty()) {
+            throw new NoHayEmpleadoException("Administrativo");
         }
-        Integer cantidadDeEmpleados = this.administrativos.size();
-        Integer random = (int)Math.floor(Math.random()*(cantidadDeEmpleados));
-        return this.administrativos.get(random);
+        Integer random = (int)Math.floor(Math.random()*(administrativos.size()));
+        return administrativos.get(random);
     }
 
 }

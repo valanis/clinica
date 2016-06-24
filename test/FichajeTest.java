@@ -129,19 +129,9 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoTrabajoTodoElMes() {
-        Administrativo admin = new Administrativo();
-        Fichaje fichaje = admin.getFichaje();
-        Integer mes = fichaje.getMes();
-        Integer diasEnElMes = fichaje.getCantidadDeDias();
+        Administrativo admin = Fixture.getAdministrativoSinFaltas();
 
-        for(int dia = 1; dia <= diasEnElMes; dia++) {
-            DateTime entrada = new DateTime(2016, mes, dia, HORA_ENTRADA, 0, 0);
-            DateTime salida = new DateTime(2016, mes, dia, HORA_SALIDA, 0, 0);
-            admin.ficharEntrada(entrada);
-            admin.ficharSalida(salida);
-        }
-
-        Integer horasNoTrabajadas = fichaje.obtenerHorasNoTrabajadas();
+        Integer horasNoTrabajadas = admin.getFichaje().obtenerHorasNoTrabajadas();
         assertEquals(horasNoTrabajadas, new Integer(0));
     }
 

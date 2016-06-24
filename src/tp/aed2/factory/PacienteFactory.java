@@ -1,5 +1,6 @@
 package tp.aed2.factory;
 
+import tp.aed2.obras_sociales.IObraSocial;
 import tp.aed2.obras_sociales.NullObraSocial;
 import tp.aed2.obras_sociales.ObraSocial;
 import tp.aed2.pacientes.Paciente;
@@ -12,7 +13,7 @@ public class PacienteFactory {
         return getPaciente(dni, edad, NullObraSocial.getInstance());
     }
 
-    public static Paciente getPaciente(Integer dni, Integer edad, ObraSocial os) {
+    public static Paciente getPaciente(Integer dni, Integer edad, IObraSocial os) {
         if(edad < 18) {
             return new PacienteMenor(os, dni, edad);
         } else {

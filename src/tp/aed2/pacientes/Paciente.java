@@ -1,16 +1,16 @@
 package tp.aed2.pacientes;
 
-import tp.aed2.obras_sociales.ObraSocial;
+import tp.aed2.obras_sociales.IObraSocial;
 
 public abstract class Paciente {
 
     //Atributos
     protected Integer dni;
     protected Integer edad;
-    protected ObraSocial os;
+    protected IObraSocial os;
 
     //Constructor
-    public Paciente(ObraSocial os, Integer dni, Integer edad) {
+    public Paciente(IObraSocial os, Integer dni, Integer edad) {
         this.os = os;
         this.dni = dni;
         this.edad = edad;
@@ -23,7 +23,7 @@ public abstract class Paciente {
     public Integer getEdad() {
         return edad;
     }
-    public ObraSocial getOs() {
+    public IObraSocial getOs() {
         return os;
     }
 

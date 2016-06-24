@@ -5,24 +5,19 @@ import tp.aed2.fichaje.Fichaje;
 import tp.aed2.pacientes.PacienteMenor;
 import java.math.BigDecimal;
 
-public class Administrativo extends Empleado {
+public class Administrativo implements IEmpleado {
 
     //Constantes
     private static final BigDecimal SUELDO = new BigDecimal(7000);
 
     //Atributos
+    private BigDecimal sueldoBasico;
     private BigDecimal cotizaciones;
     private Fichaje fichaje;
 
-    //Constructores
+    //Constructor
     public Administrativo() {
-        this.setSueldoBasico(SUELDO);
-        this.cotizaciones = BigDecimal.ZERO;
-        this.fichaje = new Fichaje();
-    }
-
-    public Administrativo(BigDecimal sueldo) {
-        this.setSueldoBasico(sueldo);
+        this.sueldoBasico = SUELDO;
         this.cotizaciones = BigDecimal.ZERO;
         this.fichaje = new Fichaje();
     }
@@ -34,6 +29,10 @@ public class Administrativo extends Empleado {
 
     public Fichaje getFichaje() {
         return this.fichaje;
+    }
+
+    public BigDecimal getSueldoBasico() {
+        return this.sueldoBasico;
     }
 
     //Métodos
@@ -49,6 +48,4 @@ public class Administrativo extends Empleado {
     public void ficharSalida(DateTime fecha) {
         this.fichaje.ficharSalida(fecha);
     }
-
-
 }

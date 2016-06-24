@@ -65,7 +65,7 @@ public class Consulta {
      * @return el valor de la consulta
      */
     private BigDecimal cotizar(Paciente paciente) {
-        BigDecimal porcentaje = paciente.getOs().getPorcentajeDescuento();
+        BigDecimal porcentaje = paciente.getOs().getPorcentaje();
         BigDecimal descuento = VALOR_BASE.multiply(porcentaje.divide(CIEN));
         return VALOR_BASE.subtract(descuento);
     }

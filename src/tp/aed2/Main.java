@@ -4,7 +4,6 @@ import tp.aed2.liquidador.LiquidadorDeSueldo;
 import tp.aed2.consultas.Consulta;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
-import tp.aed2.excepciones.SueldoNegativoException;
 import tp.aed2.factory.ConsultaFactory;
 import tp.aed2.factory.PacienteFactory;
 import tp.aed2.obras_sociales.ObraSocial;
@@ -14,7 +13,7 @@ import java.math.BigDecimal;
 
 public class Main {
 
-    public static void main(String[] args) throws EmpleadoNoTrabajoException, SueldoNegativoException {
+    public static void main(String[] args) {
 
         LiquidadorDeSueldo calculador = LiquidadorDeSueldo.getInstance();
 
