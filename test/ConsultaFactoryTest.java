@@ -1,5 +1,8 @@
+import org.junit.After;
 import org.junit.Test;
+import tp.aed2.clinica.Clinica;
 import tp.aed2.consultas.Consulta;
+import tp.aed2.empleados.Administrativo;
 import tp.aed2.factory.ConsultaFactory;
 import tp.aed2.factory.PacienteFactory;
 import tp.aed2.obras_sociales.ObraSocial;
@@ -8,6 +11,7 @@ import tp.aed2.pacientes.Paciente;
 import java.math.BigDecimal;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class ConsultaFactoryTest {
 
@@ -17,6 +21,12 @@ public class ConsultaFactoryTest {
     private static final String OS = "OSDE";
     private static final BigDecimal PORCENTAJE = new BigDecimal(1.5);
     private static final BigDecimal CIEN = new BigDecimal(100);
+
+    @After
+    public void reiniciarClinica() {
+        Clinica clinica = Clinica.getInstance();
+        clinica.reiniciar();
+    }
 
     @Test
     public void getConsultaPacienteMayorSinObraSocial() {
@@ -40,7 +50,11 @@ public class ConsultaFactoryTest {
     }
 
     @Test
-    public void getConsultaPacienteMenorSinObraSocial() {
+    public void getConsultaPacienteMenorSinObraSocial_conAdministrativo() {
+        Clinica clinica = Clinica.getInstance();
+        Administrativo admin = new Administrativo();
+        clinica.agregarAdministrativo(admin);
+
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);
         Consulta consulta = ConsultaFactory.getConsulta(paciente);
         BigDecimal valorParaMenoresSinOS = consulta.getValorParaMenoresSinOS();
@@ -48,6 +62,15 @@ public class ConsultaFactoryTest {
         //El valor de la consulta tiene que ser el valor base para menores * la edad del paciente
         BigDecimal expected = valorParaMenoresSinOS.multiply(new BigDecimal(EDAD_MENOR));
         assertEquals(consulta.getValor(), expected);
+        //Al administrativo se le tiene que sumar una cotización
+        assertEquals(admin.getCotizaciones(), BigDecimal.ONE);
+    }
+
+    @Test
+    public void getConsultaPacienteMenorSinObraSocial_sinAdministrativo() {
+        Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);
+        Consulta consulta = ConsultaFactory.getConsulta(paciente);
+        assertNull(consulta);
     }
 
     @Test

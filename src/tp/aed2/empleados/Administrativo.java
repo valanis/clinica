@@ -38,7 +38,7 @@ public class Administrativo extends Empleado {
 
     //Métodos
     public BigDecimal cotizarConsulta(PacienteMenor paciente, BigDecimal valor) {
-        this.cotizaciones.add(BigDecimal.ONE);
+        this.cotizaciones = this.cotizaciones.add(BigDecimal.ONE);
         return valor.multiply(new BigDecimal(paciente.getEdad()));
     }
 
