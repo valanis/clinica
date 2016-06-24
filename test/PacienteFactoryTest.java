@@ -6,6 +6,8 @@ import tp.aed2.pacientes.Paciente;
 
 import java.math.BigDecimal;
 
+import static org.junit.Assert.assertEquals;
+
 public class PacienteFactoryTest {
 
     private static final Integer EDAD_MENOR = 17;
@@ -19,46 +21,46 @@ public class PacienteFactoryTest {
     @Test
     public void getPacienteMenorDeEdadSinObraSocial() {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);
-        assert paciente.getDni() == DNI;
-        assert paciente.getEdad() == EDAD_MENOR;
-        assert paciente.esMayorDeEdad() == false;
-        assert paciente.getOs().getId() == NULL_OS;
-        assert paciente.getOs().getPorcentajeDescuento() == NULL_PORCENTAJE;
-        assert paciente.getOs().cubre() == false;
+        assertEquals(paciente.getDni(), DNI);
+        assertEquals(paciente.getEdad(), EDAD_MENOR);
+        assertEquals(paciente.esMayorDeEdad(), false);
+        assertEquals(paciente.getOs().getId(), NULL_OS);
+        assertEquals(paciente.getOs().getPorcentajeDescuento(), NULL_PORCENTAJE);
+        assertEquals(paciente.getOs().cubre(), false);
     }
 
     @Test
     public void getPacienteMenorDeEdadConObraSocial() {
         ObraSocial os = new ObraSocial(OS, PORCENTAJE);
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR, os);
-        assert paciente.getDni() == DNI;
-        assert paciente.getEdad() == EDAD_MENOR;
-        assert paciente.esMayorDeEdad() == false;
-        assert paciente.getOs().getId() == OS;
-        assert paciente.getOs().getPorcentajeDescuento() == PORCENTAJE;
-        assert paciente.getOs().cubre() == true;
+        assertEquals(paciente.getDni(), DNI);
+        assertEquals(paciente.getEdad(), EDAD_MENOR);
+        assertEquals(paciente.esMayorDeEdad(), false);
+        assertEquals(paciente.getOs().getId(), OS);
+        assertEquals(paciente.getOs().getPorcentajeDescuento(), PORCENTAJE);
+        assertEquals(paciente.getOs().cubre(), true);
     }
 
     @Test
     public void getPacienteMayorDeEdadSinObraSocial() {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MAYOR);
-        assert paciente.getDni() == DNI;
-        assert paciente.getEdad() == EDAD_MAYOR;
-        assert paciente.esMayorDeEdad() == true;
-        assert paciente.getOs().getId() == NULL_OS;
-        assert paciente.getOs().getPorcentajeDescuento() == NULL_PORCENTAJE;
-        assert paciente.getOs().cubre() == false;
+        assertEquals(paciente.getDni(), DNI);
+        assertEquals(paciente.getEdad(), EDAD_MAYOR);
+        assertEquals(paciente.esMayorDeEdad(), true);
+        assertEquals(paciente.getOs().getId(), NULL_OS);
+        assertEquals(paciente.getOs().getPorcentajeDescuento(), NULL_PORCENTAJE);
+        assertEquals(paciente.getOs().cubre(), false);
     }
 
     @Test
     public void getPacienteMayorDeEdadConObraSocial() {
         ObraSocial os = new ObraSocial(OS, PORCENTAJE);
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MAYOR, os);
-        assert paciente.getDni() == DNI;
-        assert paciente.getEdad() == EDAD_MAYOR;
-        assert paciente.esMayorDeEdad() == true;
-        assert paciente.getOs().getId() == OS;
-        assert paciente.getOs().getPorcentajeDescuento() == PORCENTAJE;
-        assert paciente.getOs().cubre() == true;
+        assertEquals(paciente.getDni(), DNI);
+        assertEquals(paciente.getEdad(), EDAD_MAYOR);
+        assertEquals(paciente.esMayorDeEdad(), true);
+        assertEquals(paciente.getOs().getId(), OS);
+        assertEquals(paciente.getOs().getPorcentajeDescuento(), PORCENTAJE);
+        assertEquals(paciente.getOs().cubre(), true);
     }
 }

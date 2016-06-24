@@ -47,7 +47,7 @@ public class Administrativo extends Empleado {
     }
 
     public void ficharSalida(DateTime fecha) {
-        this.fichaje.ficharEntrada(fecha);
+        this.fichaje.ficharSalida(fecha);
     }
 
 

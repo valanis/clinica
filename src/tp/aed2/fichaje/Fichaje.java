@@ -15,6 +15,7 @@ public class Fichaje {
 
     //Atributos
     private HashMap<Integer, ArrayList<DateTime>> fichaje;
+    private Integer mes;
 
     //Constructor
     public Fichaje() {
@@ -31,6 +32,7 @@ public class Fichaje {
     private HashMap<Integer, ArrayList<DateTime>> iniciarMes() {
         HashMap fichaje = new HashMap();
         DateTime hoy = new DateTime();
+        this.mes = hoy.getMonthOfYear();
         Integer diasEnElMes = hoy.dayOfMonth().getMaximumValue();
         for(int dia = 1; dia <= diasEnElMes; dia++) {
             fichaje.put(dia, new ArrayList(2));
@@ -38,51 +40,65 @@ public class Fichaje {
         return fichaje;
     }
 
+    public ArrayList<DateTime> getFichajeDelDia(Integer dia) {
+        return this.fichaje.get(dia);
+    }
+
+    public Integer getMes() {
+        return this.mes;
+    }
+
     /**
      * @param fecha: momento en que se quiere fichar la entrada
-     * Tiene que existir el día en el mes.
+     * Tiene que coincidir el mes actual con el de la fecha a fichar.
      * Tiene que ser el primer fichaje del día.
      * En caso contrario, no se ficha.
      */
     public void ficharEntrada(DateTime fecha) {
-        Integer diaDelMes = fecha.getDayOfMonth();
-        ArrayList fichajeDeHoy = this.fichaje.get(diaDelMes);
-        if(existeElDia(fichajeDeHoy)) {
-            if(noSeFichoPreviamente(fichajeDeHoy)) {
-                fichajeDeHoy.add(fecha);
-                this.fichaje.put(diaDelMes, fichajeDeHoy);
-            } else {
-                System.out.println("Fichaje inválido: entrada ya fichada para el día.");
-            }
-        } else {
-            System.out.println("Fichaje inválido: día no existente en el mes.");
+        if(noCoincideMes(fecha)) {
+            System.out.println("Fichaje inválido: el mes actual es " + this.getMes());
+            return;
         }
+        Integer diaDelMes = fecha.getDayOfMonth();
+        ArrayList fichajeDeHoy = getFichajeDelDia(diaDelMes);
+        if(seFichoPreviamente(fichajeDeHoy)) {
+            System.out.println("Fichaje inválido: entrada ya fichada para el día");
+            return;
+        }
+        fichajeDeHoy.add(fecha);
+        this.fichaje.put(diaDelMes, fichajeDeHoy);
+    }
+
+    private Boolean noCoincideMes(DateTime fecha) {
+        return this.mes != fecha.getMonthOfYear();
     }
 
     /**
      * @param fecha: momento en que se quiere fichar la salida
-     * Tiene que existir el día en el mes.
+     * Tiene que coincidir el mes actual con el de la fecha a fichar.
      * Se tiene que haber fichado la entrada previamente para ese día.
      * La fecha de salida tiene que ser posterior a la de entrada.
      * En caso contrario, no se ficha.
      */
     public void ficharSalida(DateTime fecha) {
-        Integer diaDelMes = fecha.getDayOfMonth();
-        ArrayList fichajeDeHoy = this.fichaje.get(diaDelMes);
+        if(noCoincideMes(fecha)) {
+            System.out.println("Fichaje inválido: el mes actual es: " + this.getMes());
+            return;
+        }
 
-        if(existeElDia(fichajeDeHoy)) {
-            if(seFichoPreviamente(fichajeDeHoy)) {
-                if(esValido(fichajeDeHoy, fecha)) {
-                    fichajeDeHoy.add(fecha);
-                    this.fichaje.put(diaDelMes, fichajeDeHoy);
-                } else {
-                    System.out.println("Fichaje inválido: la fecha de salida debe ser posterior a la de entrada");
-                }
-            } else {
-                System.out.println("Fichaje inválido: no se fichó la entrada");
-            }
+        Integer diaDelMes = fecha.getDayOfMonth();
+        ArrayList fichajeDeHoy = getFichajeDelDia(diaDelMes);
+
+        if(noSeFichoPreviamente(fichajeDeHoy)) {
+            System.out.println("Fichaje inválido: no se fichó la entrada");
+            return;
+        }
+
+        if(esValido(fichajeDeHoy, fecha)) {
+            fichajeDeHoy.add(fecha);
+            this.fichaje.put(diaDelMes, fichajeDeHoy);
         } else {
-            System.out.println("Fichaje inválido: día no existente en el mes");
+            System.out.println("Fichaje inválido: la fecha de salida debe ser posterior a la de entrada");
         }
     }
 
@@ -147,10 +163,23 @@ public class Fichaje {
     /**
      * @return la cantidad de horas que se espera que trabaje un empleado
      */
-    public Integer getHorasATrabajar() {
-        return this.HORAS_A_TRABAJAR;
+    public static Integer getHorasATrabajar() {
+        return HORAS_A_TRABAJAR;
     }
 
+    /**
+     * @return la hora de entrada de los empleados
+     */
+    public static Integer getHoraEntrada() {
+        return HORA_ENTRADA;
+    }
+
+    /**
+     * @return la hora de salida de los empleados
+     */
+    public static Integer getHoraSalida() {
+        return HORA_SALIDA;
+    }
 
     /**
      * @return la cantidad de horas no trabajadas en el mes.
@@ -160,7 +189,7 @@ public class Fichaje {
     public Integer obtenerHorasNoTrabajadas() {
         Integer horasNoTrabajadas = 0;
         for(int dia = 1; dia <= this.getCantidadDeDias(); dia++) {
-            ArrayList<DateTime> fichajeDelDia = this.fichaje.get(dia);
+            ArrayList<DateTime> fichajeDelDia = getFichajeDelDia(dia);
             if(diaNoTrabajado(fichajeDelDia)) {
                 horasNoTrabajadas += this.HORAS_A_TRABAJAR;
             } else if(diaNoFichado(fichajeDelDia)) {

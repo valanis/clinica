@@ -7,6 +7,8 @@ import tp.aed2.pacientes.Paciente;
 
 import java.math.BigDecimal;
 
+import static org.junit.Assert.assertEquals;
+
 public class ConsultaFactoryTest {
 
     private static final Integer EDAD_MENOR = 17;
@@ -20,9 +22,9 @@ public class ConsultaFactoryTest {
     public void getConsultaPacienteMayorSinObraSocial() {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MAYOR);
         Consulta consulta = ConsultaFactory.getConsulta(paciente);
-        assert consulta.getPaciente() == paciente;
+        assertEquals(consulta.getPaciente(), paciente);
         //El valor de la consulta tiene que ser el valor base
-        assert consulta.getValor() == consulta.getValorBase();
+        assertEquals(consulta.getValor(), consulta.getValorBase());
     }
 
     @Test
@@ -31,9 +33,10 @@ public class ConsultaFactoryTest {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MAYOR, os);
         Consulta consulta = ConsultaFactory.getConsulta(paciente);
         BigDecimal valorBase = consulta.getValorBase();
-        assert consulta.getPaciente() == paciente;
+        assertEquals(consulta.getPaciente(), paciente);
         //El valor de la consulta tiene que ser el valor base - el porcentaje de descuento de la os
-        assert consulta.getValor() == valorBase.subtract(valorBase.multiply(PORCENTAJE.divide(CIEN)));
+        BigDecimal expected = valorBase.subtract(valorBase.multiply(PORCENTAJE.divide(CIEN)));
+        assertEquals(consulta.getValor(), expected);
     }
 
     @Test
@@ -41,9 +44,10 @@ public class ConsultaFactoryTest {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);
         Consulta consulta = ConsultaFactory.getConsulta(paciente);
         BigDecimal valorParaMenoresSinOS = consulta.getValorParaMenoresSinOS();
-        assert consulta.getPaciente() == paciente;
+        assertEquals(consulta.getPaciente(), paciente);
         //El valor de la consulta tiene que ser el valor base para menores * la edad del paciente
-        assert consulta.getValor() == valorParaMenoresSinOS.multiply(new BigDecimal(EDAD_MENOR));
+        BigDecimal expected = valorParaMenoresSinOS.multiply(new BigDecimal(EDAD_MENOR));
+        assertEquals(consulta.getValor(), expected);
     }
 
     @Test
@@ -52,8 +56,9 @@ public class ConsultaFactoryTest {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR, os);
         Consulta consulta = ConsultaFactory.getConsulta(paciente);
         BigDecimal valorBase = consulta.getValorBase();
-        assert consulta.getPaciente() == paciente;
+        assertEquals(consulta.getPaciente(), paciente);
         //El valor de la consulta tiene que ser el valor base - el porcentaje de descuento de la os
-        assert consulta.getValor() == valorBase.subtract(valorBase.multiply(PORCENTAJE.divide(CIEN)));
+        BigDecimal expected = valorBase.subtract(valorBase.multiply(PORCENTAJE.divide(CIEN)));
+        assertEquals(consulta.getValor(), expected);
     }
 }
