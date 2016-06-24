@@ -1,6 +1,6 @@
 package tp.aed2.clinica;
 
-import tp.aed2.calculador.LiquidadorDeSueldo;
+import tp.aed2.liquidador.LiquidadorDeSueldo;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;

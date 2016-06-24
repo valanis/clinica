@@ -1,6 +1,6 @@
 package tp.aed2;
 
-import tp.aed2.calculador.LiquidadorDeSueldo;
+import tp.aed2.liquidador.LiquidadorDeSueldo;
 import tp.aed2.consultas.Consulta;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
