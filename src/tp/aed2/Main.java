@@ -39,11 +39,11 @@ public class Main {
         /* OBRAS SOCIALES */
         ArrayList<ObraSocial> obrasSociales = new ArrayList<ObraSocial>();
 
-        ObraSocial obraSocial01 = new ObraSocial("Obra Social 01", BigDecimal.valueOf(10));
-        ObraSocial obraSocial02 = new ObraSocial("Obra Social 02", BigDecimal.valueOf(20));
-        ObraSocial obraSocial03 = new ObraSocial("Obra Social 03", BigDecimal.valueOf(30));
-        ObraSocial obraSocial04 = new ObraSocial("Obra Social 04", BigDecimal.valueOf(40));
-        ObraSocial obraSocial05 = new ObraSocial("Obra Social 05", BigDecimal.valueOf(50));
+        ObraSocial osde = new ObraSocial("OSDE", BigDecimal.valueOf(10));
+        ObraSocial osecac = new ObraSocial("OSECAC", BigDecimal.valueOf(20));
+        ObraSocial swiss = new ObraSocial("Swiss Medical", BigDecimal.valueOf(30));
+        ObraSocial galeno = new ObraSocial("Galeno", BigDecimal.valueOf(40));
+        ObraSocial pami = new ObraSocial("PAMI", BigDecimal.valueOf(50));
 
         Clinica clinica = Clinica.getInstance();
 
@@ -64,6 +64,12 @@ public class Main {
         clinica.agregarDoctor(mengarda);
         clinica.agregarDoctor(lopez);
         clinica.agregarDoctor(perez);
+
+        clinica.agregarObraSocial(osde);
+        clinica.agregarObraSocial(osecac);
+        clinica.agregarObraSocial(swiss);
+        clinica.agregarObraSocial(galeno);
+        clinica.agregarObraSocial(pami);
 
         Consola inicio =  new Consola();
 

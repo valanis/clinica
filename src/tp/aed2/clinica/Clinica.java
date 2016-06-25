@@ -1,5 +1,6 @@
 package tp.aed2.clinica;
 
+import org.joda.time.DateTime;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
@@ -17,16 +18,17 @@ public class Clinica {
     private ArrayList<Doctor> doctores;
     private ArrayList<Administrativo> administrativos;
     private ArrayList<Camillero> camilleros;
-    private ArrayList<ObraSocial> obraSocialsHabilitadas;
+    private ArrayList<ObraSocial> obrasSociales;
     private Sat sat;
     private LiquidadorDeSueldo liquidadorDeSueldo;
+    private DateTime fecha;
 
 
     private Clinica() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
         this.camilleros = new ArrayList();
-        this.obraSocialsHabilitadas = new ArrayList();
+        this.obrasSociales = new ArrayList();
         this.sat = Sat.getInstance();
         this.liquidadorDeSueldo = LiquidadorDeSueldo.getInstance();
     }
@@ -54,6 +56,10 @@ public class Clinica {
     public void agregarCamillero(Camillero camillero) {
         this.camilleros.add(camillero);
         this.sat.agregarSuscriptor(camillero);
+    }
+
+    public void agregarObraSocial(ObraSocial os) {
+        this.obrasSociales.add(os);
     }
 
     public void reiniciar() {
