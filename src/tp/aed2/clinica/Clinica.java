@@ -5,6 +5,7 @@ import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.NoHayEmpleadoException;
 import tp.aed2.liquidador.LiquidadorDeSueldo;
+import tp.aed2.obras_sociales.ObraSocial;
 import tp.aed2.sat.Sat;
 
 import java.util.ArrayList;
@@ -16,13 +17,16 @@ public class Clinica {
     private ArrayList<Doctor> doctores;
     private ArrayList<Administrativo> administrativos;
     private ArrayList<Camillero> camilleros;
+    private ArrayList<ObraSocial> obraSocialsHabilitadas;
     private Sat sat;
     private LiquidadorDeSueldo liquidadorDeSueldo;
+
 
     private Clinica() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
         this.camilleros = new ArrayList();
+        this.obraSocialsHabilitadas = new ArrayList();
         this.sat = Sat.getInstance();
         this.liquidadorDeSueldo = LiquidadorDeSueldo.getInstance();
     }

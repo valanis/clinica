@@ -3,6 +3,7 @@ import org.junit.Test;
 import tp.aed2.clinica.Clinica;
 import tp.aed2.consultas.Consulta;
 import tp.aed2.empleados.Administrativo;
+import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
 import tp.aed2.liquidador.LiquidadorDeSueldo;
@@ -113,6 +114,14 @@ public class LiquidadorTest {
         } catch(Exception exc) {
             fail("No debe arrojar excepción");
         }
+    }
+
+    @Test
+    public void calcularCamilleroQueNoRealizoViajes() {
+        Camillero camillero = new Camillero();
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico();
+        assertEquals(expected, sueldo);
     }
 
 }

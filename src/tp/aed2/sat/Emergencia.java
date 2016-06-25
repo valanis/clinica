@@ -7,8 +7,22 @@ import java.util.ArrayList;
 
 public class Emergencia {
 
-    private ArrayList<Paciente> pacientes;
     private Viaje viaje;
     private Boolean atendida;
 
+    public ArrayList<Paciente> getPacientes() {
+        return this.viaje.getPacientes();
+    }
+
+    public Viaje getViaje() {
+        return this.viaje;
+    }
+
+    public Boolean fueAtendida() {
+        return atendida;
+    }
+
+    public void marcarComoAtendida() {
+        this.atendida = true;
+    }
 }

@@ -15,8 +15,17 @@ public class Sat extends EmergenciaPublisher {
 
     @Override
     public void notificar(Emergencia emergencia) {
-        for(IEmergenciaSuscriptor suscriptor : suscriptores) {
-            suscriptor.update(emergencia);
-        }
+
+        suscriptores.parallelStream().forEach(
+                suscriptor -> {
+                    try {
+                        suscriptor.update(emergencia);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+        );
+
+
     }
 }

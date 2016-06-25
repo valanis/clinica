@@ -6,6 +6,8 @@ import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
 import tp.aed2.fichaje.Fichaje;
+import tp.aed2.sat.Emergencia;
+import tp.aed2.viajes.Viaje;
 
 import java.math.BigDecimal;
 
@@ -16,6 +18,10 @@ public class LiquidadorDeSueldo {
     //Constantes
     private static final BigDecimal VALOR_HORA = new BigDecimal(10);
     private static final BigDecimal VALOR_COTIZACION = new BigDecimal(50);
+    private static final BigDecimal VALOR_VIAJE = new BigDecimal(20);
+    private static final BigDecimal VALOR_KM = new BigDecimal(100);
+    private static final BigDecimal ADICIONAL_PACIENTE = new BigDecimal(120);
+    private static final BigDecimal PLUS_FIN_DE_SEMANA = new BigDecimal(2);
 
     private LiquidadorDeSueldo() {}
 
@@ -79,7 +85,29 @@ public class LiquidadorDeSueldo {
         return this.VALOR_HORA.multiply(new BigDecimal(horasNoTrabajadas));
     }
 
+    /**
+     * @param camillero Empleado camillero
+     * @return sueldo del mes (básico + plus por viajes realizados + plus por kms
+     * + plus por haber transportado a más de un paciente + plus por trabajar en fin de semana)
+     */
     public BigDecimal calcular(Camillero camillero) {
-        return BigDecimal.ZERO;
+        BigDecimal sueldo = camillero.getSueldoBasico();
+
+        for (Viaje viaje : camillero.getViajesRealizados()){
+            BigDecimal valorViaje = VALOR_VIAJE;
+            valorViaje.add(viaje.getKilometros().multiply(VALOR_KM));
+
+            if (viaje.viajoMasDeUnPaciente()){
+                valorViaje.add(ADICIONAL_PACIENTE);
+            }
+
+            if (viaje.fueFinDeSemana()){
+                valorViaje.multiply(PLUS_FIN_DE_SEMANA);
+            }
+
+            sueldo = sueldo.add(valorViaje);
+        }
+
+        return sueldo;
     }
 }
