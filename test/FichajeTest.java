@@ -1,5 +1,6 @@
 import org.joda.time.DateTime;
 import org.junit.Test;
+import tp.aed2.clinica.Clinica;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.fichaje.Fichaje;
 
@@ -13,9 +14,12 @@ public class FichajeTest {
     private static final Integer HORA_ENTRADA = Fichaje.getHoraEntrada();
     private static final Integer HORA_SALIDA = Fichaje.getHoraSalida();
 
+    private static Clinica clinica = Clinica.getInstance();
+    private static DateTime fecha = clinica.getFecha();
+
     @Test
     public void newAdministrativoCreaUnFichajeVacio() {
-        Integer diasEnMesActual = new DateTime().dayOfMonth().getMaximumValue();
+        Integer diasEnMesActual = fecha.dayOfMonth().getMaximumValue();
         Administrativo admin = new Administrativo();
         Fichaje fichaje = admin.getFichaje();
         assertNotNull(fichaje);
@@ -26,7 +30,6 @@ public class FichajeTest {
 
     @Test
     public void ficharEntradaValida() {
-        DateTime fecha = new DateTime();
         Integer dia = fecha.getDayOfMonth();
         Administrativo admin = new Administrativo();
         admin.ficharEntrada(fecha);
@@ -38,8 +41,8 @@ public class FichajeTest {
 
     @Test
     public void ficharEntradaNoValida_yaSeHabiaFichadoEntrada() {
-        DateTime fecha1 = new DateTime();
-        DateTime fecha2 = new DateTime().plusMillis(1);
+        DateTime fecha1 = fecha;
+        DateTime fecha2 = fecha.plusMillis(1);
 
         Integer dia = fecha1.getDayOfMonth();
         Administrativo admin = new Administrativo();
@@ -54,11 +57,11 @@ public class FichajeTest {
 
     @Test
     public void ficharEntradaNoValida_mesInvalido() {
-        DateTime fecha = new DateTime().plusMonths(1);
+        DateTime fechaFutura = fecha.plusMonths(1);
 
-        Integer dia = fecha.getDayOfMonth();
+        Integer dia = fechaFutura.getDayOfMonth();
         Administrativo admin = new Administrativo();
-        admin.ficharEntrada(fecha);
+        admin.ficharEntrada(fechaFutura);
 
         Fichaje fichaje = admin.getFichaje();
         ArrayList<DateTime> fichajeDelDia = fichaje.getFichajeDelDia(dia);
@@ -67,8 +70,8 @@ public class FichajeTest {
 
     @Test
     public void ficharSalidaValida() {
-        DateTime fechaEntrada = new DateTime();
-        DateTime fechaSalida = fechaEntrada.plusMillis(1);
+        DateTime fechaEntrada = fecha;
+        DateTime fechaSalida = fecha.plusMillis(1);
 
         Integer dia = fechaEntrada.getDayOfMonth();
         Administrativo admin = new Administrativo();
@@ -84,8 +87,6 @@ public class FichajeTest {
 
     @Test
     public void ficharSalidaNoValida_noSeFichoEntrada() {
-        DateTime fecha = new DateTime();
-
         Integer dia = fecha.getDayOfMonth();
         Administrativo admin = new Administrativo();
         admin.ficharSalida(fecha);
@@ -97,8 +98,8 @@ public class FichajeTest {
 
     @Test
     public void ficharSalidaNoValida_salidaEsAnteriorAEntrada() {
-        DateTime fechaSalida = new DateTime();
-        DateTime fechaEntrada = fechaSalida.plusMillis(1);
+        DateTime fechaSalida = fecha;
+        DateTime fechaEntrada = fecha.plusMillis(1);
 
         Integer dia = fechaSalida.getDayOfMonth();
         Administrativo admin = new Administrativo();
@@ -113,7 +114,7 @@ public class FichajeTest {
 
     @Test
     public void ficharSalidaNoValida_mesInvalido() {
-        DateTime fechaEntrada = new DateTime();
+        DateTime fechaEntrada = fecha;
         DateTime fechaSalida = fechaEntrada.plusMonths(1);
 
         Integer dia = fechaSalida.getDayOfMonth();

@@ -31,6 +31,7 @@ public class Clinica {
         this.obrasSociales = new ArrayList();
         this.sat = Sat.getInstance();
         this.liquidadorDeSueldo = LiquidadorDeSueldo.getInstance();
+        this.fecha = new DateTime(2016, 01, 01, 0, 0);
     }
 
     public static Clinica getInstance() {
@@ -38,6 +39,14 @@ public class Clinica {
             instance = new Clinica();
         }
         return instance;
+    }
+
+    public DateTime getFecha() {
+        return this.fecha;
+    }
+
+    public void setFecha(DateTime fecha) {
+        this.fecha = fecha;
     }
 
     public void agregarDoctor(Doctor doctor) {

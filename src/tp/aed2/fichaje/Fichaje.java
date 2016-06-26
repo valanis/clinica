@@ -2,6 +2,7 @@ package tp.aed2.fichaje;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
+import tp.aed2.clinica.Clinica;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +32,7 @@ public class Fichaje {
      */
     private HashMap<Integer, ArrayList<DateTime>> iniciarMes() {
         HashMap fichaje = new HashMap();
-        DateTime hoy = new DateTime();
+        DateTime hoy = Clinica.getInstance().getFecha();
         this.mes = hoy.getMonthOfYear();
         Integer diasEnElMes = hoy.dayOfMonth().getMaximumValue();
         for(int dia = 1; dia <= diasEnElMes; dia++) {
