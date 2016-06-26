@@ -51,7 +51,7 @@ public class ConsultaFactoryTest {
     @Test
     public void getConsultaPacienteMenorSinObraSocial_conAdministrativo() {
         Clinica clinica = Clinica.getInstance();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ConsultaPacienteMenorSinObraSocial");
         clinica.agregarAdministrativo(admin);
 
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);

@@ -15,7 +15,7 @@ public class Sat extends EmergenciaPublisher {
 
     @Override
     public void notificar(Emergencia emergencia) {
-
+        System.out.println("Notificando la emergencia a " + suscriptores.size() + " camilleros.");
         suscriptores.parallelStream().forEach(
                 suscriptor -> {
                     try {

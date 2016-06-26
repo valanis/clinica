@@ -5,5 +5,6 @@ import java.math.BigDecimal;
 public interface IEmpleado {
 
     public BigDecimal getSueldoBasico();
+    public String getId();
 
 }

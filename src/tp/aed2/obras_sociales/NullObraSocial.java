@@ -34,4 +34,9 @@ public class NullObraSocial implements IObraSocial  {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "[Sin Cobertura]";
+    }
+
 }

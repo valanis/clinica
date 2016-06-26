@@ -31,7 +31,7 @@ public class Clinica {
         this.obrasSociales = new ArrayList();
         this.sat = Sat.getInstance();
         this.liquidadorDeSueldo = LiquidadorDeSueldo.getInstance();
-        this.fecha = new DateTime(2016, 01, 01, 0, 0);
+        this.fecha = new DateTime();
     }
 
     public static Clinica getInstance() {
@@ -88,6 +88,30 @@ public class Clinica {
         }
         Integer random = (int)Math.floor(Math.random()*(administrativos.size()));
         return administrativos.get(random);
+    }
+
+    public Sat getSat() {
+        return sat;
+    }
+
+    public LiquidadorDeSueldo getLiquidadorDeSueldo() {
+        return liquidadorDeSueldo;
+    }
+
+    public ArrayList<Administrativo> getAdministrativos() {
+        return administrativos;
+    }
+
+    public ArrayList<Camillero> getCamilleros() {
+        return camilleros;
+    }
+
+    public ArrayList<ObraSocial> getObrasSociales() {
+        return obrasSociales;
+    }
+
+    public ArrayList<Doctor> getDoctores() {
+        return doctores;
     }
 
 }

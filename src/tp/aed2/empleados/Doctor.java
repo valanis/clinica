@@ -11,11 +11,13 @@ public class Doctor implements IEmpleado {
     private static final BigDecimal SUELDO_BASICO = new BigDecimal(50000);
 
     //Atributos
+    private String id;
     private BigDecimal sueldoBasico;
     private ArrayList<Consulta> consultasAtendidas;
 
     //Constructor
-    public Doctor() {
+    public Doctor(String id) {
+        this.id = id;
         this.sueldoBasico = SUELDO_BASICO;
         this.consultasAtendidas = new ArrayList<Consulta>();
     }
@@ -25,6 +27,10 @@ public class Doctor implements IEmpleado {
         return this.sueldoBasico;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public ArrayList<Consulta> getConsultasAtendidas() {
         return consultasAtendidas;
     }
@@ -32,18 +38,12 @@ public class Doctor implements IEmpleado {
     //Métodos
     public void atender(Consulta consulta) {
         this.consultasAtendidas.add(consulta);
+        System.out.println("Consulta atendida.");
     }
 
     @Override
     public String toString() {
-        String doctorToString = "[[Doctor]: \n  [Sueldo:" + this.getSueldoBasico() + "], \n" +
-                "   [Consultas:\n";
-        for (int i = 0; i < this.consultasAtendidas.size(); i++) {
-            doctorToString += "         "+ (i+1)+':'+ this.consultasAtendidas.get(i) + "\n";
-        }
-        doctorToString += "]]";
-        return doctorToString;
+        return "[Doctor: "+this.getId()+"]";
     }
-
 
 }

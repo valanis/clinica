@@ -1,16 +1,19 @@
 package tp.aed2.sat;
 
-import tp.aed2.pacientes.Paciente;
 import tp.aed2.viajes.Viaje;
-
-import java.util.ArrayList;
 
 public class Emergencia {
 
     private Viaje viaje;
     private Boolean atendida;
 
-    public ArrayList<Paciente> getPacientes() {
+    public Emergencia(Viaje viaje){
+        this.viaje = viaje;
+        this.atendida = false;
+
+    }
+
+    public Integer getPacientes() {
         return this.viaje.getPacientes();
     }
 
@@ -24,5 +27,9 @@ public class Emergencia {
 
     public void marcarComoAtendida() {
         this.atendida = true;
+    }
+
+    public String toString() {
+        return "[Emergencia] Atendida: " +this.fueAtendida()+ " " +this.getViaje()+"]";
     }
 }

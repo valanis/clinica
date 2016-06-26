@@ -20,7 +20,7 @@ public class FichajeTest {
     @Test
     public void newAdministrativoCreaUnFichajeVacio() {
         Integer diasEnMesActual = fecha.dayOfMonth().getMaximumValue();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_newAdministrativoCreaUnFichajeVacio");
         Fichaje fichaje = admin.getFichaje();
         assertNotNull(fichaje);
         assertEquals(fichaje.getCantidadDeDias(), diasEnMesActual);
@@ -31,7 +31,7 @@ public class FichajeTest {
     @Test
     public void ficharEntradaValida() {
         Integer dia = fecha.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharEntradaValida");
         admin.ficharEntrada(fecha);
         Fichaje fichaje = admin.getFichaje();
         ArrayList<DateTime> fichajeDelDia = fichaje.getFichajeDelDia(dia);
@@ -45,7 +45,7 @@ public class FichajeTest {
         DateTime fecha2 = fecha.plusMillis(1);
 
         Integer dia = fecha1.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharEntradaNoValida_yaSeHabiaFichadoEntrada");
         admin.ficharEntrada(fecha1);
         admin.ficharEntrada(fecha2);
 
@@ -60,7 +60,7 @@ public class FichajeTest {
         DateTime fechaFutura = fecha.plusMonths(1);
 
         Integer dia = fechaFutura.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharEntradaNoValida_mesInvalido");
         admin.ficharEntrada(fechaFutura);
 
         Fichaje fichaje = admin.getFichaje();
@@ -74,7 +74,7 @@ public class FichajeTest {
         DateTime fechaSalida = fecha.plusMillis(1);
 
         Integer dia = fechaEntrada.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharSalidaValida");
         admin.ficharEntrada(fechaEntrada);
         admin.ficharSalida(fechaSalida);
 
@@ -88,7 +88,7 @@ public class FichajeTest {
     @Test
     public void ficharSalidaNoValida_noSeFichoEntrada() {
         Integer dia = fecha.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharSalidaNoValida_noSeFichoEntrada");
         admin.ficharSalida(fecha);
 
         Fichaje fichaje = admin.getFichaje();
@@ -102,7 +102,7 @@ public class FichajeTest {
         DateTime fechaEntrada = fecha.plusMillis(1);
 
         Integer dia = fechaSalida.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharSalidaNoValida_salidaEsAnteriorAEntrada");
         admin.ficharEntrada(fechaEntrada);
         admin.ficharSalida(fechaSalida);
 
@@ -118,7 +118,7 @@ public class FichajeTest {
         DateTime fechaSalida = fechaEntrada.plusMonths(1);
 
         Integer dia = fechaSalida.getDayOfMonth();
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_ficharSalidaNoValida_mesInvalido");
         admin.ficharEntrada(fechaEntrada);
         admin.ficharSalida(fechaSalida);
 
@@ -138,7 +138,7 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoFaltoUnDia() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_obtenerHorasNoTrabajas_elEmpleadoFaltoUnDia");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();
@@ -157,7 +157,7 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoLlegaDosHorasTardeSiempre() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_obtenerHorasNoTrabajas_elEmpleadoLlegaDosHorasTardeSiempre");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();
@@ -177,7 +177,7 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoSeVaDosHorasAntesSiempre() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_obtenerHorasNoTrabajas_elEmpleadoLlegaDosHorasTardeSiempre");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();
@@ -197,7 +197,7 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoLlegaDosHorasAntesYSeVaDosHorasAntesSiempre() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_obtenerHorasNoTrabajas_elEmpleadoLlegaDosHorasAntesYSeVaDosHorasAntesSiempre");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();
@@ -218,7 +218,7 @@ public class FichajeTest {
 
     @Test
     public void obtenerHorasNoTrabajas_elEmpleadoFichoMalTodosLosDias() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Adm_obtenerHorasNoTrabajas_elEmpleadoFichoMalTodosLosDias");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();

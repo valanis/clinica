@@ -24,14 +24,14 @@ public class LiquidadorTest {
 
     @Test
     public void calcularDoctorSinConsultasAtendidas() {
-        Doctor doctor = new Doctor();
+        Doctor doctor = new Doctor("Doc");
         BigDecimal sueldo = liquidador.calcular(doctor);
         assertEquals(doctor.getSueldoBasico(), sueldo);
     }
 
     @Test
     public void calcularDoctorConConsultaAtendidas() {
-        Doctor doctor = new Doctor();
+        Doctor doctor = new Doctor("Doc");
         Consulta consulta = Fixture.getConsultaMayorNoCubierto();
         //El valor de la consulta debe ser el base porque es un paciente mayor sin OS
         BigDecimal valorConsulta = consulta.getValor();
@@ -43,7 +43,7 @@ public class LiquidadorTest {
 
     @Test
     public void calcularDoctorConConsultasAtendidas() {
-        Doctor doctor = new Doctor();
+        Doctor doctor = new Doctor("Doc");
         Consulta consulta = Fixture.getConsultaMayorNoCubierto();
         //El valor de la consulta debe ser el base porque es un paciente mayor sin OS
         BigDecimal valorConsulta = consulta.getValor();
@@ -60,40 +60,29 @@ public class LiquidadorTest {
         //El empleado no cotizó consultas ni se le descontó por horas no trabajadas,
         //el sueldo debe ser el básico.
         BigDecimal expected = administrativo.getSueldoBasico();
-        try {
-            BigDecimal sueldo = liquidador.calcular(administrativo);
-            assertEquals(expected, sueldo);
-        } catch(Exception exc) {
-            fail("No debe arrojar excepción");
-        }
+        BigDecimal sueldo = liquidador.calcular(administrativo);
+        assertEquals(expected, sueldo);
     }
 
     @Test
     public void calcularAdministrativoQueNoFaltoNuncaYCotizoConsultas() {
         Administrativo administrativo = Fixture.getAdministrativoSinFaltas();
-        Consulta consulta = Fixture.getConsultaMenorNoCubierto(administrativo);
+        Fixture.getConsultaMenorNoCubierto(administrativo);
         //El empleado cotizó una consulta y no se le descontó por horas no trabajadas,
         //el sueldo debe ser el básico + el valor de la cotización.
         BigDecimal sueldoBasico = administrativo.getSueldoBasico();
         BigDecimal plus = liquidador.getValorCotizacion();
         BigDecimal expected = sueldoBasico.add(plus);
-        try {
-            BigDecimal sueldo = liquidador.calcular(administrativo);
-            assertEquals(expected, sueldo);
-        } catch(Exception exc) {
-            fail("No debe arrojar excepción");
-        }
+        BigDecimal sueldo = liquidador.calcular(administrativo);
+        assertEquals(expected, sueldo);
     }
 
-    @Test(expected = EmpleadoNoTrabajoException.class)
-    public void calcularAdministrativoQueNoTrabajoNunca() throws Exception {
-        Administrativo administrativo = new Administrativo();
-        try {
-            liquidador.calcular(administrativo);
-            fail("Debe arrojar EmpleadoNoTrabajoException");
-        } catch(Exception exc) {
-            throw exc;
-        }
+    public void calcularAdministrativoQueNoTrabajoNunca() {
+        Administrativo administrativo = new Administrativo("Adm");
+        BigDecimal sueldo = liquidador.calcular(administrativo);
+        BigDecimal expected = BigDecimal.ZERO;
+        assertEquals(expected, sueldo);
+
     }
 
     @Test
@@ -108,17 +97,13 @@ public class LiquidadorTest {
         BigDecimal descuento = liquidador.getValorHora().multiply(new BigDecimal(horasATrabajar));
 
         BigDecimal expected = sueldoBasico.add(plus).subtract(descuento);
-        try {
-            BigDecimal sueldo = liquidador.calcular(administrativo);
-            assertEquals(expected, sueldo);
-        } catch(Exception exc) {
-            fail("No debe arrojar excepción");
-        }
+        BigDecimal sueldo = liquidador.calcular(administrativo);
+        assertEquals(expected, sueldo);
     }
 
     @Test
     public void calcularCamilleroQueNoRealizoViajes() {
-        Camillero camillero = new Camillero();
+        Camillero camillero = new Camillero("Camillero");
         BigDecimal sueldo = liquidador.calcular(camillero);
         BigDecimal expected = camillero.getSueldoBasico();
         assertEquals(expected, sueldo);

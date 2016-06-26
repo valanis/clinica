@@ -23,7 +23,7 @@ public class Fixture {
     private static final BigDecimal PORCENTAJE = new BigDecimal(1.5);
 
     public static Administrativo getAdministrativoSinFaltas() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Admin");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();
@@ -39,7 +39,7 @@ public class Fixture {
     }
 
     public static Administrativo getAdministrativoConUnaFalta() {
-        Administrativo admin = new Administrativo();
+        Administrativo admin = new Administrativo("Admin");
         Fichaje fichaje = admin.getFichaje();
         Integer mes = fichaje.getMes();
         Integer diasEnElMes = fichaje.getCantidadDeDias();

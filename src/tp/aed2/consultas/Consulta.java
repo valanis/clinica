@@ -72,7 +72,7 @@ public class Consulta {
 
     @Override
     public String toString(){
-        return "[[Consulta] Valor:"+this.getValor()+", Paciente:"+this.getPaciente()+"]";
+        return "[[Consulta] Valor: "+this.getValor()+", Paciente: "+this.getPaciente()+"]";
     }
 
 }

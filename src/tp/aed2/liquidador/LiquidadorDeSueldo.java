@@ -6,7 +6,6 @@ import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
 import tp.aed2.excepciones.EmpleadoNoTrabajoException;
 import tp.aed2.fichaje.Fichaje;
-import tp.aed2.sat.Emergencia;
 import tp.aed2.viajes.Viaje;
 
 import java.math.BigDecimal;
@@ -54,12 +53,16 @@ public class LiquidadorDeSueldo {
         return sueldo;
     }
 
-    public BigDecimal calcular(Administrativo admin) throws EmpleadoNoTrabajoException {
+    public BigDecimal calcular(Administrativo admin) {
         BigDecimal sueldo = admin.getSueldoBasico();
         BigDecimal plusPorCotizaciones = obtenerValorDeCotizaciones(admin);
-        BigDecimal descuentoPorHorasNoTrabajadas =  obtenerDescuentoPorHorasNoTrabajadas(admin);
-
-        return sueldo.add(plusPorCotizaciones).subtract(descuentoPorHorasNoTrabajadas);
+        try {
+            BigDecimal descuentoPorHorasNoTrabajadas = obtenerDescuentoPorHorasNoTrabajadas(admin);
+            sueldo = sueldo.add(plusPorCotizaciones).subtract(descuentoPorHorasNoTrabajadas);
+        } catch (EmpleadoNoTrabajoException e) {
+            sueldo = BigDecimal.ZERO;
+        }
+        return sueldo;
     }
 
     private BigDecimal obtenerValorDeCotizaciones(Administrativo admin) {
@@ -95,14 +98,14 @@ public class LiquidadorDeSueldo {
 
         for (Viaje viaje : camillero.getViajesRealizados()){
             BigDecimal valorViaje = VALOR_VIAJE;
-            valorViaje.add(viaje.getKilometros().multiply(VALOR_KM));
+            valorViaje = valorViaje.add(viaje.getKilometros().multiply(VALOR_KM));
 
             if (viaje.viajoMasDeUnPaciente()){
-                valorViaje.add(ADICIONAL_PACIENTE);
+                valorViaje = valorViaje.add(ADICIONAL_PACIENTE);
             }
 
             if (viaje.fueFinDeSemana()){
-                valorViaje.multiply(PLUS_FIN_DE_SEMANA);
+                valorViaje = valorViaje.multiply(PLUS_FIN_DE_SEMANA);
             }
 
             sueldo = sueldo.add(valorViaje);

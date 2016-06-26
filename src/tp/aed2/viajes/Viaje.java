@@ -1,10 +1,8 @@
 package tp.aed2.viajes;
 
 import org.joda.time.DateTime;
-import tp.aed2.pacientes.Paciente;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 
 import static org.joda.time.DateTimeConstants.SATURDAY;
 import static org.joda.time.DateTimeConstants.SUNDAY;
@@ -12,12 +10,18 @@ import static org.joda.time.DateTimeConstants.SUNDAY;
 public class Viaje {
 
     //Atributos
-    private ArrayList<Paciente> pacientes;
+    private Integer pacientes;
     private BigDecimal kilometros;
     private DateTime fecha;
 
+    public Viaje(Integer pacientes, BigDecimal kilometros, DateTime fecha){
+        this.pacientes = pacientes;
+        this.kilometros = kilometros;
+        this.fecha = fecha;
+    }
+
     //Getters
-    public ArrayList<Paciente> getPacientes() {
+    public Integer getPacientes() {
         return this.pacientes;
     }
 
@@ -31,7 +35,7 @@ public class Viaje {
 
     //Métodos
     private Integer getCantidadDePacientes() {
-        return this.pacientes.size();
+        return this.pacientes;
     }
 
     public Boolean viajoMasDeUnPaciente() {
@@ -40,5 +44,9 @@ public class Viaje {
 
     public Boolean fueFinDeSemana() {
         return fecha.getDayOfWeek() == SATURDAY || fecha.getDayOfWeek() == SUNDAY;
+    }
+
+    public String toString() {
+        return "[Viaje] #Pacientes: " +this.getPacientes()+ " #KM: " +this.getKilometros()+ " Fecha: " +this.getFecha();
     }
 }

@@ -15,11 +15,13 @@ public class Camillero implements IEmpleado, IEmergenciaSuscriptor {
     private static final BigDecimal SUELDO_BASICO = new BigDecimal(10000);
 
     //Atributos
+    String id;
     BigDecimal sueldoBasico;
     ArrayList<Viaje> viajesRealizados;
 
     //Constructor
-    public Camillero() {
+    public Camillero(String id) {
+        this.id = id;
         this.sueldoBasico = SUELDO_BASICO;
         this.viajesRealizados = new ArrayList<Viaje>();
     }
@@ -33,19 +35,44 @@ public class Camillero implements IEmpleado, IEmergenciaSuscriptor {
         return this.viajesRealizados;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    private void agregarViaje(Viaje viaje) {
+        this.viajesRealizados.add(viaje);
+        System.out.println("Viaje realizado.");
+    }
+
     //Métodos
     @Override
     public void update(Emergencia emergencia) throws InterruptedException {
+        System.out.println(this + " notificado!");
+
+        ReentrantLock sueño = juntarGanasDeTrabajar();
+
+        if(!emergencia.fueAtendida()){
+            System.out.println(this + " realizará el viaje.");
+            emergencia.marcarComoAtendida();
+            agregarViaje(emergencia.getViaje());
+        }
+
+        volverADormir(sueño);
+    }
+
+    private ReentrantLock juntarGanasDeTrabajar() throws InterruptedException  {
         Random random = new Random();
         Thread.currentThread().sleep(random.nextInt(5000));
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
+        return lock;
+    }
 
-        if(!emergencia.fueAtendida()){
-            emergencia.marcarComoAtendida();
-            this.viajesRealizados.add(emergencia.getViaje());
-        }
-
+    private void volverADormir(ReentrantLock lock) {
         lock.unlock();
+    }
+
+    public String toString() {
+        return "[Camillero: "+this.getId()+"]";
     }
 }
