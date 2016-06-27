@@ -43,8 +43,9 @@ public class Main {
         clinica.agregarAdministrativo(mengardaAdmin);
 
         DateTime fecha = clinica.getFecha();
+        Integer max = lopezAdmin.getFichaje().getCantidadDeDias();
 
-        for(int dia = 1; dia < fecha.getDayOfMonth(); dia++) {
+        for(int dia = 1; dia < max; dia++) {
             DateTime entrada = new DateTime(fecha.getYear(), fecha.getMonthOfYear(), dia, 9, 0, 0);
             DateTime salida = new DateTime(fecha.getYear(), fecha.getMonthOfYear(), dia, 18, 0, 0);
             lopezAdmin.ficharEntrada(entrada);
@@ -58,12 +59,6 @@ public class Main {
             mengardaAdmin.ficharEntrada(entrada);
             mengardaAdmin.ficharSalida(salida);
         }
-
-        lopezAdmin.ficharEntrada(fecha);
-        perezAdmin.ficharEntrada(fecha);
-        alanisAdmin.ficharEntrada(fecha);
-        floresAdmin.ficharEntrada(fecha);
-        mengardaAdmin.ficharEntrada(fecha);
 
         /* CAMILLEROS */
         Camillero lopezCamillero = new Camillero("LopezCamillero");

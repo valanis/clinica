@@ -1,1 +1,4 @@
 #clinica
+
+Para correr todos los tests, correr la clase TestsRunner.java
+Para ejecutar la aplicación, correr la clase Main.java
