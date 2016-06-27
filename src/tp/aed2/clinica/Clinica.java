@@ -24,6 +24,9 @@ public class Clinica {
     private DateTime fecha;
 
 
+    /**
+     * Constructor
+     */
     private Clinica() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
@@ -34,6 +37,10 @@ public class Clinica {
         this.fecha = new DateTime();
     }
 
+    /**
+     * @use Verifica si hay instanciada una clinica, sino la instancia.
+     * @return Clinica
+     */
     public static Clinica getInstance() {
         if(instance == null) {
             instance = new Clinica();
@@ -41,36 +48,61 @@ public class Clinica {
         return instance;
     }
 
+
+    /**
+     * @use Obtener la fecha actual de la clinica
+     * @return DateTime
+     */
     public DateTime getFecha() {
         return this.fecha;
     }
 
+    /**
+     * @use Setear la fecha de la clinica.
+     * @param fecha
+     */
     public void setFecha(DateTime fecha) {
         this.fecha = fecha;
     }
 
+    /**
+     * @use Agregar al empleado a la lista de doctores
+     * @param doctor
+     */
     public void agregarDoctor(Doctor doctor) {
         this.doctores.add(doctor);
     }
 
+    /**
+     * @use Agregar al empleado a la lista de administrativos
+     * @param administrativo
+     */
     public void agregarAdministrativo(Administrativo administrativo) {
         this.administrativos.add(administrativo);
     }
 
     /**
-     * @param camillero
-     * Agregar al empleado a la lista de camilleros,
+     * @use Agregar al empleado a la lista de camilleros,
      * a la lista de suscriptores del SAT
+     * @param camillero
      */
     public void agregarCamillero(Camillero camillero) {
         this.camilleros.add(camillero);
         this.sat.agregarSuscriptor(camillero);
     }
 
+    /**
+     * @use Agregar la obra social a la lista de obra sociales
+     * @param os
+     */
     public void agregarObraSocial(ObraSocial os) {
         this.obrasSociales.add(os);
     }
 
+
+    /**
+     * @use Reiniciar la instancia de la clínica.
+     */
     public void reiniciar() {
         this.doctores = new ArrayList();
         this.administrativos = new ArrayList();
@@ -79,7 +111,8 @@ public class Clinica {
     }
 
     /**
-     * @return un empleado administrativo al azar
+     * @use Obtener un empleado administrativo al azar
+     * @return Administrativo
      * @throws tp.aed2.excepciones.NoHayEmpleadoException cuando no hay administrativos
      */
     public Administrativo getAdministrativo() throws NoHayEmpleadoException {
@@ -90,26 +123,50 @@ public class Clinica {
         return administrativos.get(random);
     }
 
+    /**
+     * @use Devolver el Sistema de Atencion Telefonica de la Clinica
+     * @return Sat
+     */
     public Sat getSat() {
         return sat;
     }
 
+    /**
+     * @use Devolver el Sistema de Atencion Telefonica de la Clinica
+     * @return LiquidadorDeSueldo
+     */
     public LiquidadorDeSueldo getLiquidadorDeSueldo() {
         return liquidadorDeSueldo;
     }
 
+    /**
+     * @use Devolver la lista de administrativos de la Clinica
+     * @return ArrayList<Administrativo>
+     */
     public ArrayList<Administrativo> getAdministrativos() {
         return administrativos;
     }
 
+    /**
+     * @use Devolver la lista de Camilleros de la Clinica
+     * @return ArrayList<Camillero>
+     */
     public ArrayList<Camillero> getCamilleros() {
         return camilleros;
     }
 
+    /**
+     * @use Devolver la lista de Obras Sociales de la Clinica
+     * @return ArrayList<ObraSocial>
+     */
     public ArrayList<ObraSocial> getObrasSociales() {
         return obrasSociales;
     }
 
+    /**
+     * @use Devolver la lista de Doctores de la Clinica
+     * @return ArrayList<Doctor>
+     */
     public ArrayList<Doctor> getDoctores() {
         return doctores;
     }

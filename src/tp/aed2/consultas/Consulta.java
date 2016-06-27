@@ -19,7 +19,7 @@ public class Consulta {
 
     //Constructores
     /**
-     * Crea una consulta para un paciente (con o sin cobertura),
+     * @uses Crear una consulta para un paciente (con o sin cobertura),
      * calcula el valor de la consulta.
      * @param paciente
      */
@@ -29,7 +29,7 @@ public class Consulta {
     }
 
     /**
-     * Crea una consulta para un paciente menor de edad, sin cobertura.
+     * @uses Crea una consulta para un paciente menor de edad, sin cobertura.
      * Se llama al empleado administrativo para que cotice la consulta.
      * @param paciente necesariamente menor de edad
      * @param admin empleado administrativo.
@@ -57,7 +57,8 @@ public class Consulta {
     }
 
     //Métodos
-    /** Devuelve el valor de la consulta, fórmula:
+    /**
+     * @use Devuelve el valor de la consulta, fórmula:
      * valor_base - (valor_base * porcentaje_desc_os / 100)
      * Si el paciente no tiene OS, porcentaje_desc_os es 0,
      * y el valor de la consulta queda igual al valor_base.

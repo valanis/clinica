@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>tp.aed2</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1385.0">tp.aed2.viajes.Viaje</node>
+    <node x="685.0" y="617.0">tp.aed2.sat.IEmergenciaSuscriptor</node>
+    <node x="0.0" y="0.0">tp.aed2.fichaje.Fichaje</node>
+    <node x="608.75" y="1029.0">tp.aed2.pacientes.Paciente</node>
+    <node x="1117.25" y="763.0">tp.aed2.empleados.Doctor</node>
+    <node x="0.0" y="1029.0">tp.aed2.sat.EmergenciaPublisher</node>
+    <node x="104.5" y="1220.0">tp.aed2.sat.Sat</node>
+    <node x="216.0" y="606.0">tp.aed2.obras_sociales.IObraSocial</node>
+    <node x="0.0" y="1638.0">tp.aed2.excepciones.NoHayEmpleadoException</node>
+    <node x="797.0" y="1385.0">tp.aed2.ui.Consola</node>
+    <node x="1177.75" y="606.0">tp.aed2.empleados.IEmpleado</node>
+    <node x="313.0" y="1638.0">tp.aed2.excepciones.EmpleadoNoTrabajoException</node>
+    <node x="1420.0" y="1385.0">tp.aed2.factory.PacienteFactory</node>
+    <node x="1488.25" y="730.0">tp.aed2.empleados.Administrativo</node>
+    <node x="815.0" y="1243.0">tp.aed2.pacientes.PacienteMenor</node>
+    <node x="612.0" y="1638.0">tp.aed2.Main</node>
+    <node x="1212.0" y="1029.0">tp.aed2.consultas.Consulta</node>
+    <node x="471.0" y="1385.0">tp.aed2.sat.Emergencia</node>
+    <node x="1085.0" y="1385.0">tp.aed2.factory.ConsultaFactory</node>
+    <node x="712.0" y="0.0">tp.aed2.liquidador.LiquidadorDeSueldo</node>
+    <node x="686.25" y="730.0">tp.aed2.empleados.Camillero</node>
+    <node x="312.0" y="797.5">tp.aed2.obras_sociales.ObraSocial</node>
+    <node x="444.0" y="1243.0">tp.aed2.pacientes.PacienteMayor</node>
+    <node x="0.0" y="753.0">tp.aed2.obras_sociales.NullObraSocial</node>
+    <node x="1294.0" y="0.0">tp.aed2.clinica.Clinica</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.empleados.Doctor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.sat.IEmergenciaSuscriptor">
+      <point x="-102.75" y="-126.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="tp.aed2.sat.Sat" target="tp.aed2.sat.EmergenciaPublisher">
+      <point x="0.0" y="-60.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.excepciones.NoHayEmpleadoException">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.Main" target="tp.aed2.empleados.Doctor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.viajes.Viaje">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.factory.ConsultaFactory" target="tp.aed2.consultas.Consulta">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.consultas.Consulta" target="tp.aed2.pacientes.Paciente">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.obras_sociales.NullObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
+      <point x="0.0" y="-115.5" />
+      <point x="146.0" y="728.0" />
+      <point x="263.5" y="728.0" />
+      <point x="-47.5" y="48.5" />
+    </edge>
+    <edge source="tp.aed2.empleados.Administrativo" target="tp.aed2.fichaje.Fichaje">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.liquidador.LiquidadorDeSueldo">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Doctor" target="tp.aed2.consultas.Consulta">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.obras_sociales.ObraSocial">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.sat.Sat">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.obras_sociales.ObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
+      <point x="0.0" y="-71.0" />
+      <point x="476.0" y="728.0" />
+      <point x="358.5" y="728.0" />
+      <point x="47.5" y="48.5" />
+    </edge>
+    <edge source="tp.aed2.sat.EmergenciaPublisher" target="tp.aed2.sat.IEmergenciaSuscriptor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.empleados.IEmpleado">
+      <point x="102.75" y="-126.5" />
+      <point x="994.5" y="705.0" />
+      <point x="1216.0833333333335" y="705.0" />
+      <point x="-76.66666666666663" y="37.0" />
+    </edge>
+    <edge source="tp.aed2.sat.Emergencia" target="tp.aed2.viajes.Viaje">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Administrativo" target="tp.aed2.empleados.IEmpleado">
+      <point x="0.0" y="-126.5" />
+      <point x="1667.25" y="705.0" />
+      <point x="1369.4166666666667" y="705.0" />
+      <point x="76.66666666666674" y="37.0" />
+    </edge>
+    <edge source="tp.aed2.empleados.Doctor" target="tp.aed2.empleados.IEmpleado">
+      <point x="0.0" y="-93.5" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.empleados.Camillero">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.ui.Consola" target="tp.aed2.viajes.Viaje">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.Main" target="tp.aed2.empleados.Administrativo">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.factory.PacienteFactory" target="tp.aed2.pacientes.PacienteMayor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.liquidador.LiquidadorDeSueldo" target="tp.aed2.excepciones.EmpleadoNoTrabajoException">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.pacientes.PacienteMayor" target="tp.aed2.pacientes.Paciente">
+      <point x="0.0" y="-37.5" />
+      <point x="619.5" y="1218.0" />
+      <point x="707.0" y="1218.0" />
+      <point x="-98.25" y="82.0" />
+    </edge>
+    <edge source="tp.aed2.Main" target="tp.aed2.empleados.Camillero">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.pacientes.Paciente" target="tp.aed2.obras_sociales.IObraSocial">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.clinica.Clinica" target="tp.aed2.empleados.Administrativo">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.Main" target="tp.aed2.ui.Consola">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.ui.Consola" target="tp.aed2.sat.Emergencia">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.ui.Consola" target="tp.aed2.clinica.Clinica">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.Main" target="tp.aed2.obras_sociales.ObraSocial">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="tp.aed2.pacientes.PacienteMenor" target="tp.aed2.pacientes.Paciente">
+      <point x="0.0" y="-37.5" />
+      <point x="991.0" y="1218.0" />
+      <point x="903.5" y="1218.0" />
+      <point x="98.25" y="82.0" />
+    </edge>
+    <edge source="tp.aed2.factory.PacienteFactory" target="tp.aed2.pacientes.PacienteMenor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6118811881188119" x="2031.1343042071198" y="862.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -24,6 +24,10 @@ public class LiquidadorDeSueldo {
 
     private LiquidadorDeSueldo() {}
 
+    /**
+     *
+     * @return Devuelve una instancia de LiquidadorDeSueldos, de no exisitir una, la crea
+     */
     public static LiquidadorDeSueldo getInstance() {
         if(instance == null) {
             instance = new LiquidadorDeSueldo();
@@ -31,10 +35,46 @@ public class LiquidadorDeSueldo {
         return instance;
     }
 
+    /**
+     *
+     * @return Devuelve el valor de la cotización -Para Administrativos-
+     */
     public BigDecimal getValorCotizacion() {
         return this.VALOR_COTIZACION;
     }
 
+    /**
+     * @return Devuelve el valor del KM en los viajes -Para Camilleros-
+     */
+    public BigDecimal getValorKm() {
+        return this.VALOR_KM;
+    }
+
+    /**
+     * @return Devuelve el valor de los viajes -Para Camilleros-
+     */
+    public BigDecimal getValorViaje() {
+        return this.VALOR_VIAJE;
+    }
+
+    /**
+     * @return Devuelve el valor de los viajes en fin de semana -Para Camilleros-
+     */
+    public BigDecimal getPlusFinDeSemana() {
+        return this.PLUS_FIN_DE_SEMANA;
+    }
+
+    /**
+     * @return Devuelve el valor de los viajes cuando llevan más de un paciente -Para Camilleros-
+     */
+    public BigDecimal getValorAdicionalPaciente() {
+        return this.ADICIONAL_PACIENTE;
+    }
+
+    /**
+     *
+     * @return Devuelve el valor de la hora trabajada -aAra Administrativos-
+     */
     public BigDecimal getValorHora() {
         return this.VALOR_HORA;
     }
@@ -53,6 +93,12 @@ public class LiquidadorDeSueldo {
         return sueldo;
     }
 
+    /**
+     * Calcula el sueldo para el corriente mes de un empleado Administrativo
+     * @param admin
+     * @return sueldo del mes (sueldo básico + plus por consultas cotizadas - Horas no trabajadas)
+     * Si las horas trabajas equivalen al total de horas que debe trabajar el empleado, su suelo es cero
+     */
     public BigDecimal calcular(Administrativo admin) {
         BigDecimal sueldo = admin.getSueldoBasico();
         BigDecimal plusPorCotizaciones = obtenerValorDeCotizaciones(admin);
@@ -65,6 +111,11 @@ public class LiquidadorDeSueldo {
         return sueldo;
     }
 
+    /**
+     *
+     * @param admin
+     * @return Devuelve el resultado de la multiplicación entre la cantidad de consultas cotizadas y el valor de cada cotización
+     */
     private BigDecimal obtenerValorDeCotizaciones(Administrativo admin) {
         return this.VALOR_COTIZACION.multiply(admin.getCotizaciones());
     }

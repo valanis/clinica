@@ -7,6 +7,7 @@ import tp.aed2.factory.PacienteFactory;
 import tp.aed2.fichaje.Fichaje;
 import tp.aed2.obras_sociales.ObraSocial;
 import tp.aed2.pacientes.Paciente;
+import tp.aed2.viajes.Viaje;
 
 import java.math.BigDecimal;
 
@@ -21,6 +22,7 @@ public class Fixture {
     private static final Integer DNI = 1;
     private static final String OS = "OSDE";
     private static final BigDecimal PORCENTAJE = new BigDecimal(1.5);
+    private static final BigDecimal VALOR_VIAJE = BigDecimal.valueOf(20);
 
     public static Administrativo getAdministrativoSinFaltas() {
         Administrativo admin = new Administrativo("Admin");
@@ -77,4 +79,29 @@ public class Fixture {
         Paciente paciente = PacienteFactory.getPaciente(DNI, EDAD_MENOR);
         return ConsultaFactory.getConsulta(paciente);
     }
+
+    public static Viaje getViajeDeUnPacienteEnDiaDeSemana() {
+        //20/06/2015: lunes
+        DateTime dateTime = new DateTime(2016,6,20,10,10,05);
+        return new Viaje(1, new BigDecimal(100), dateTime);
+    }
+
+    public static Viaje getViajeDeUnPacienteEnFinDeSemana() {
+        //25/06/2015: sábado
+        DateTime dateTime = new DateTime(2016,6,25,10,10,05);
+        return new Viaje(1, new BigDecimal(100), dateTime);
+    }
+
+    public static Viaje getViajeDeDosPacientesEnDiaDeSemana() {
+        //20/06/2015: lunes
+        DateTime dateTime = new DateTime(2016,6,20,10,10,05);
+        return new Viaje(2, new BigDecimal(100), dateTime);
+    }
+
+    public static Viaje getViajeDeDosPacientesEnFinDeSemana() {
+        //25/06/2015: sábado
+        DateTime dateTime = new DateTime(2016,6,25,10,10,05);
+        return new Viaje(2, new BigDecimal(100), dateTime);
+    }
+
 }

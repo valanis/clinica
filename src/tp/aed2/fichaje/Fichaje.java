@@ -1,7 +1,6 @@
 package tp.aed2.fichaje;
 
 import org.joda.time.DateTime;
-import org.joda.time.Duration;
 import tp.aed2.clinica.Clinica;
 
 import java.util.ArrayList;
@@ -19,6 +18,10 @@ public class Fichaje {
     private Integer mes;
 
     //Constructor
+
+    /**
+     *
+     */
     public Fichaje() {
         this.fichaje = iniciarMes();
     }

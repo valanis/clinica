@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ceea6280-9574-4872-823a-1816ec9be68f" name="Default" comment="" />
     <ignored path="Clinica.iws" />
@@ -26,90 +29,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Administrativo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Administrativo.java">
+      <file leaf-file-name="ObraSocial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/ObraSocial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="825">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding>
-                <element signature="e#1287#1288#0" expanded="true" />
-                <element signature="e#1336#1337#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Emergencia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/Emergencia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="495">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-              <folding>
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fichaje.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tp/aed2/fichaje/Fichaje.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5555553" vertical-offset="231" max-vertical-offset="2880">
-              <caret line="36" column="65" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camillero.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Camillero.java">
+      <file leaf-file-name="NullObraSocial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/NullObraSocial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1065">
-              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-              <folding>
-                <element signature="e#1881#1882#0" expanded="true" />
-                <element signature="e#1910#1911#0" expanded="true" />
-                <element signature="e#1942#1943#0" expanded="true" />
-                <element signature="e#1996#1997#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fixture.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Fixture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1140">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="915">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReentrantLock.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3383" max-vertical-offset="10410">
-              <caret line="283" column="16" selection-start-line="283" selection-start-column="16" selection-end-line="283" selection-end-column="16" />
-              <folding>
-                <element signature="e#9117#9118#0" expanded="true" />
-                <element signature="e#9144#9145#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tp/aed2/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6996337" vertical-offset="784" max-vertical-offset="1530">
-              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -117,8 +52,8 @@
       <file leaf-file-name="Clinica.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tp/aed2/clinica/Clinica.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1380">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="2235">
+              <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -127,20 +62,74 @@
       <file leaf-file-name="Consola.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9090909" vertical-offset="0" max-vertical-offset="2565">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="3285">
+              <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiquidadorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/LiquidadorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="2975">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FichajeTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/FichajeTest.java">
+      <file leaf-file-name="LiquidadorDeSueldo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="872" max-vertical-offset="3630">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="31" />
+            <state vertical-scroll-proportion="-6.4074073" vertical-offset="637" max-vertical-offset="2445">
+              <caret line="62" column="40" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1323#1324#0" expanded="true" />
+                <element signature="e#1367#1368#0" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+                <element signature="e#2047#2048#0" expanded="true" />
+                <element signature="e#2093#2094#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fixture.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Fixture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1530">
+              <caret line="100" column="59" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Camillero.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Camillero.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1680">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Viaje.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tp/aed2/viajes/Viaje.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1140">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+              <folding>
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1117#1118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,20 +177,20 @@
         <option value="$PROJECT_DIR$/src/tp/aed2/fichaje/Fichaje.java" />
         <option value="$PROJECT_DIR$/test/FichajeTest.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/empleados/IEmpleado.java" />
-        <option value="$PROJECT_DIR$/test/Fixture.java" />
-        <option value="$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java" />
-        <option value="$PROJECT_DIR$/test/LiquidadorTest.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/sat/Sat.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/consultas/Consulta.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/obras_sociales/NullObraSocial.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/sat/Emergencia.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/viajes/Viaje.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/empleados/Doctor.java" />
-        <option value="$PROJECT_DIR$/src/tp/aed2/ui/Consola.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/clinica/Clinica.java" />
-        <option value="$PROJECT_DIR$/src/tp/aed2/empleados/Camillero.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/empleados/Administrativo.java" />
         <option value="$PROJECT_DIR$/src/tp/aed2/Main.java" />
+        <option value="$PROJECT_DIR$/src/tp/aed2/ui/Consola.java" />
+        <option value="$PROJECT_DIR$/src/tp/aed2/empleados/Camillero.java" />
+        <option value="$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java" />
+        <option value="$PROJECT_DIR$/test/Fixture.java" />
+        <option value="$PROJECT_DIR$/test/LiquidadorTest.java" />
       </list>
     </option>
   </component>
@@ -239,6 +228,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,6 +297,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="viajes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -329,7 +341,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pacientes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="obras_sociales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="liquidador" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fichaje" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,13 +531,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aed2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clinica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,11 +579,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.TestsRunner">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="ConsultaFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Clinica" />
@@ -569,7 +712,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Clinica" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -639,25 +788,6 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -686,8 +816,12 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -701,11 +835,18 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <pass-parent-envs>true</pass-parent-envs>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method />
     </configuration>
@@ -730,24 +871,12 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -785,6 +914,26 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ConsultaFactoryTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.FichajeTest" />
@@ -794,8 +943,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestsRunner" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestsRunner" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.LiquidadorTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FichajeTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ConsultaFactoryTest" />
@@ -828,12 +977,13 @@
       <workItem from="1466636165488" duration="2464000" />
       <workItem from="1466715777499" duration="27345000" />
       <workItem from="1466893197141" duration="4286000" />
-      <workItem from="1466898395261" duration="7775000" />
+      <workItem from="1466898395261" duration="11090000" />
+      <workItem from="1467041173113" duration="2889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76465000" />
+    <option name="totallyTimeSpent" value="82669000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -881,7 +1031,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.77707005" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38409474" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6565144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -909,12 +1059,36 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java</url>
-          <line>60</line>
+          <line>112</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1002,28 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/PacienteMenor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#187#188#0" expanded="false" />
-            <element signature="e#223#224#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/PacienteMayor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="e#186#187#0" expanded="false" />
-            <element signature="e#222#223#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3218" max-vertical-offset="10725">
@@ -1044,9 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="1350">
           <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,15 +1225,15 @@
             <node x="" y="">javafx</node>
             <node x="" y="">META-INF</node>
             <node x="" y="">sun</node>
-            <node x="" y="">javax</node>
-            <node x="" y="">apple</node>
             <node x="" y="">LiquidadorTest</node>
+            <node x="" y="">apple</node>
+            <node x="" y="">javax</node>
             <node x="" y="">FichajeTest</node>
-            <node x="" y="">java</node>
-            <node x="" y="">toolbarButtonGraphics</node>
             <node x="" y="">jdk</node>
-            <node x="" y="">TestsRunner</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">java</node>
             <node x="" y="">ConsultaFactoryTest</node>
+            <node x="" y="">TestsRunner</node>
           </nodes>
           <notes />
           <edges />
@@ -1100,105 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="570">
           <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/tp.aed2">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>tp.aed2</OriginalElement>
-          <nodes>
-            <node x="787.0" y="1348.0">tp.aed2.viajes.Viaje</node>
-            <node x="1277.25" y="606.0">tp.aed2.sat.IEmergenciaSuscriptor</node>
-            <node x="0.0" y="0.0">tp.aed2.fichaje.Fichaje</node>
-            <node x="1111.25" y="992.0">tp.aed2.pacientes.Paciente</node>
-            <node x="459.0" y="730.0">tp.aed2.empleados.Doctor</node>
-            <node x="104.5" y="1183.0">tp.aed2.sat.Sat</node>
-            <node x="0.0" y="992.0">tp.aed2.sat.EmergenciaPublisher</node>
-            <node x="941.0" y="0.0">tp.aed2.obras_sociales.IObraSocial</node>
-            <node x="0.0" y="1668.0">tp.aed2.excepciones.NoHayEmpleadoException</node>
-            <node x="864.0" y="606.0">tp.aed2.empleados.IEmpleado</node>
-            <node x="313.0" y="1668.0">tp.aed2.excepciones.EmpleadoNoTrabajoException</node>
-            <node x="1226.0" y="1348.0">tp.aed2.factory.PacienteFactory</node>
-            <node x="826.0" y="1668.0">tp.aed2.ui</node>
-            <node x="810.0" y="708.0">tp.aed2.empleados.Administrativo</node>
-            <node x="946.0" y="1206.0">tp.aed2.pacientes.PacienteMenor</node>
-            <node x="612.0" y="1668.0">tp.aed2.Main</node>
-            <node x="0.0" y="1348.0">tp.aed2.consultas.Consulta</node>
-            <node x="452.0" y="1348.0">tp.aed2.factory.ConsultaFactory</node>
-            <node x="1024.0" y="1348.0">tp.aed2.sat.Emergencia</node>
-            <node x="444.0" y="992.0">tp.aed2.liquidador.LiquidadorDeSueldo</node>
-            <node x="1148.0" y="741.0">tp.aed2.empleados.Camillero</node>
-            <node x="1318.0" y="1206.0">tp.aed2.pacientes.PacienteMayor</node>
-            <node x="712.0" y="180.5">tp.aed2.obras_sociales.ObraSocial</node>
-            <node x="1060.0" y="147.0">tp.aed2.obras_sociales.NullObraSocial</node>
-            <node x="0.0" y="606.0">tp.aed2.clinica.Clinica</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.sat.IEmergenciaSuscriptor">
-              <point x="77.75" y="-71.5" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="tp.aed2.sat.Sat" target="tp.aed2.sat.EmergenciaPublisher">
-              <point x="0.0" y="-60.0" />
-              <point x="0.0" y="70.5" />
-            </edge>
-            <edge source="tp.aed2.pacientes.PacienteMayor" target="tp.aed2.pacientes.Paciente">
-              <point x="0.0" y="-37.5" />
-              <point x="1493.5" y="1181.0" />
-              <point x="1406.0" y="1181.0" />
-              <point x="98.25" y="82.0" />
-            </edge>
-            <edge source="tp.aed2.obras_sociales.ObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
-              <point x="0.0" y="-71.0" />
-              <point x="876.0" y="122.0" />
-              <point x="988.5" y="122.0" />
-              <point x="-47.5" y="48.5" />
-            </edge>
-            <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.empleados.IEmpleado">
-              <point x="-77.75" y="-71.5" />
-              <point x="1225.75" y="683.0" />
-              <point x="1039.0" y="683.0" />
-              <point x="70.0" y="26.0" />
-            </edge>
-            <edge source="tp.aed2.pacientes.PacienteMenor" target="tp.aed2.pacientes.Paciente">
-              <point x="0.0" y="-37.5" />
-              <point x="1122.0" y="1181.0" />
-              <point x="1209.5" y="1181.0" />
-              <point x="-98.25" y="82.0" />
-            </edge>
-            <edge source="tp.aed2.empleados.Administrativo" target="tp.aed2.empleados.IEmpleado">
-              <point x="0.0" y="-104.5" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="tp.aed2.obras_sociales.NullObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
-              <point x="0.0" y="-104.5" />
-              <point x="1196.0" y="122.0" />
-              <point x="1083.5" y="122.0" />
-              <point x="47.5" y="48.5" />
-            </edge>
-            <edge source="tp.aed2.empleados.Doctor" target="tp.aed2.empleados.IEmpleado">
-              <point x="0.0" y="-82.5" />
-              <point x="624.5" y="683.0" />
-              <point x="899.0" y="683.0" />
-              <point x="-70.0" y="26.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7255813953488373" x="205.0" y="1685.0" />
-          <SelectedNodes>
-            <node>tp.aed2.viajes.Viaje</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-            <Category>Inner Classes</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1237,17 +1287,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="675">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#867#868#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#1521#1522#0" expanded="false" />
+            <element signature="e#1566#1567#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/factory/PacienteFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="375">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1255,8 +1297,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3383" max-vertical-offset="10410">
+          <caret line="283" column="16" selection-start-line="283" selection-start-column="16" selection-end-line="283" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#9117#9118#0" expanded="false" />
+            <element signature="e#9144#9145#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/FichajeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="872" max-vertical-offset="3630">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1269,39 +1329,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/consultas/Consulta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="1710">
-          <caret line="76" column="59" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1080">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
           <folding>
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="false" />
+            <element signature="e#1334#1335#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/LiquidadorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/IObraSocial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1086" max-vertical-offset="1545">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/EmergenciaPublisher.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Administrativo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1455">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/factory/PacienteFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="600">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Doctor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="1170">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/fichaje/Fichaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2985">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tp.aed2">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tp.aed2</OriginalElement>
+          <nodes>
+            <node x="0.0" y="1385.0">tp.aed2.viajes.Viaje</node>
+            <node x="685.0" y="617.0">tp.aed2.sat.IEmergenciaSuscriptor</node>
+            <node x="0.0" y="0.0">tp.aed2.fichaje.Fichaje</node>
+            <node x="608.75" y="1029.0">tp.aed2.pacientes.Paciente</node>
+            <node x="1117.25" y="763.0">tp.aed2.empleados.Doctor</node>
+            <node x="104.5" y="1220.0">tp.aed2.sat.Sat</node>
+            <node x="0.0" y="1029.0">tp.aed2.sat.EmergenciaPublisher</node>
+            <node x="216.0" y="606.0">tp.aed2.obras_sociales.IObraSocial</node>
+            <node x="0.0" y="1638.0">tp.aed2.excepciones.NoHayEmpleadoException</node>
+            <node x="797.0" y="1385.0">tp.aed2.ui.Consola</node>
+            <node x="1177.75" y="606.0">tp.aed2.empleados.IEmpleado</node>
+            <node x="1420.0" y="1385.0">tp.aed2.factory.PacienteFactory</node>
+            <node x="313.0" y="1638.0">tp.aed2.excepciones.EmpleadoNoTrabajoException</node>
+            <node x="1488.25" y="730.0">tp.aed2.empleados.Administrativo</node>
+            <node x="815.0" y="1243.0">tp.aed2.pacientes.PacienteMenor</node>
+            <node x="612.0" y="1638.0">tp.aed2.Main</node>
+            <node x="1212.0" y="1029.0">tp.aed2.consultas.Consulta</node>
+            <node x="471.0" y="1385.0">tp.aed2.sat.Emergencia</node>
+            <node x="1085.0" y="1385.0">tp.aed2.factory.ConsultaFactory</node>
+            <node x="686.25" y="730.0">tp.aed2.empleados.Camillero</node>
+            <node x="712.0" y="0.0">tp.aed2.liquidador.LiquidadorDeSueldo</node>
+            <node x="444.0" y="1243.0">tp.aed2.pacientes.PacienteMayor</node>
+            <node x="312.0" y="797.5">tp.aed2.obras_sociales.ObraSocial</node>
+            <node x="0.0" y="753.0">tp.aed2.obras_sociales.NullObraSocial</node>
+            <node x="1294.0" y="0.0">tp.aed2.clinica.Clinica</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.sat.IEmergenciaSuscriptor">
+              <point x="-102.75" y="-126.5" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="tp.aed2.sat.Sat" target="tp.aed2.sat.EmergenciaPublisher">
+              <point x="0.0" y="-60.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="tp.aed2.obras_sociales.NullObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
+              <point x="0.0" y="-115.5" />
+              <point x="146.0" y="728.0" />
+              <point x="263.5" y="728.0" />
+              <point x="-47.5" y="48.5" />
+            </edge>
+            <edge source="tp.aed2.obras_sociales.ObraSocial" target="tp.aed2.obras_sociales.IObraSocial">
+              <point x="0.0" y="-71.0" />
+              <point x="476.0" y="728.0" />
+              <point x="358.5" y="728.0" />
+              <point x="47.5" y="48.5" />
+            </edge>
+            <edge source="tp.aed2.empleados.Camillero" target="tp.aed2.empleados.IEmpleado">
+              <point x="102.75" y="-126.5" />
+              <point x="994.5" y="705.0" />
+              <point x="1216.0833333333335" y="705.0" />
+              <point x="-76.66666666666663" y="37.0" />
+            </edge>
+            <edge source="tp.aed2.empleados.Administrativo" target="tp.aed2.empleados.IEmpleado">
+              <point x="0.0" y="-126.5" />
+              <point x="1667.25" y="705.0" />
+              <point x="1369.4166666666667" y="705.0" />
+              <point x="76.66666666666674" y="37.0" />
+            </edge>
+            <edge source="tp.aed2.empleados.Doctor" target="tp.aed2.empleados.IEmpleado">
+              <point x="0.0" y="-93.5" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="tp.aed2.pacientes.PacienteMayor" target="tp.aed2.pacientes.Paciente">
+              <point x="0.0" y="-37.5" />
+              <point x="619.5" y="1218.0" />
+              <point x="707.0" y="1218.0" />
+              <point x="-98.25" y="82.0" />
+            </edge>
+            <edge source="tp.aed2.pacientes.PacienteMenor" target="tp.aed2.pacientes.Paciente">
+              <point x="0.0" y="-37.5" />
+              <point x="991.0" y="1218.0" />
+              <point x="903.5" y="1218.0" />
+              <point x="98.25" y="82.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6118811881188119" x="2052.0" y="202.0" />
+          <SelectedNodes>
+            <node>tp.aed2.empleados.Camillero</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/Sat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="690">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1314,175 +1504,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/Paciente.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/EmergenciaPublisher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/IObraSocial.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/Emergencia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="855">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/PacienteMenor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/PacienteMayor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="450">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/pacientes/Paciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="675">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/ObraSocial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/aed2/obras_sociales/NullObraSocial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8888888" vertical-offset="27" max-vertical-offset="600">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="915">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/viajes/Viaje.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/clinica/Clinica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.962963" vertical-offset="214" max-vertical-offset="630">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding>
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1060#1061#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/consultas/Consulta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1080">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding>
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Doctor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="825">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="2235">
+          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/aed2/ui/Consola.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9090909" vertical-offset="0" max-vertical-offset="2565">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3383" max-vertical-offset="10410">
-          <caret line="283" column="16" selection-start-line="283" selection-start-column="16" selection-end-line="283" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="3285">
+          <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
           <folding>
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9144#9145#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Camillero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1065">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding>
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-            <element signature="e#1942#1943#0" expanded="true" />
-            <element signature="e#1996#1997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/sat/Emergencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="495">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/empleados/Administrativo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="825">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/clinica/Clinica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1380">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1680">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/FichajeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/viajes/Viaje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="872" max-vertical-offset="3630">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="1140">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1117#1118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Fixture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1140">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1530">
+          <caret line="100" column="59" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/fichaje/Fichaje.java">
+    <entry file="file://$PROJECT_DIR$/src/tp/aed2/liquidador/LiquidadorDeSueldo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553" vertical-offset="231" max-vertical-offset="2880">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/aed2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6996337" vertical-offset="784" max-vertical-offset="1530">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        <state vertical-scroll-proportion="-6.4074073" vertical-offset="637" max-vertical-offset="2445">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2093#2094#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/LiquidadorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="2975">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

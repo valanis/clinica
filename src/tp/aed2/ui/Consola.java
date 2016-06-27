@@ -15,6 +15,7 @@ import tp.aed2.sat.Emergencia;
 import tp.aed2.viajes.Viaje;
 
 import java.math.BigDecimal;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Consola {
@@ -38,8 +39,13 @@ public class Consola {
         System.out.println("1 - Ingresar una emergencia");
         System.out.println("2 - Ingresar una consulta");
         System.out.println("3 - Calcular el sueldo de los empleados");
+        try {
+            accion = sc.nextInt();
+        } catch (InputMismatchException exception) {
+            System.out.println("Opción incorrecta, vuelva a intentar. \n");
+            iniciarSistema(clinica);
+        }
 
-        accion = sc.nextInt();
         System.out.println("Usted eligió: " + accion);
 
         switch (accion) {
@@ -57,13 +63,14 @@ public class Consola {
                 break;
             default:
                 System.out.println("Opción incorrecta, vuelva a intentar. \n");
-                iniciarSistema(clinica);
+                this.iniciarSistema(clinica);
         }
     }
 
     private void ingresarEmergencia() {
-        Integer cantPacientes;
+        Integer cantPacientes = 0;
         BigDecimal cantKm = BigDecimal.valueOf(0);
+        DateTime dateTime = new DateTime();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("                           \\|||/");
@@ -71,70 +78,112 @@ public class Consola {
         System.out.println("------------------------ooO-(_)-Ooo------------------------");
         System.out.println("Ingresando emergencia: ");
         System.out.println("Ingrese Cantidad de pacientes:");
-        cantPacientes = sc.nextInt();
-        System.out.println("Ingrese los km:");
-        cantKm = sc.nextBigDecimal();
+        try {
+            cantPacientes = sc.nextInt();
+        } catch (InputMismatchException exception) {
+            System.out.println("Opción incorrecta, vuelva a intentar ingresar la emergencia. \n");
+            this.ingresarEmergencia();
+        }
+        System.out.println("Ingrese los km: (Utilizando '.')");
 
-        DateTime dateTime = new DateTime();
+        try {
+            cantKm = sc.nextBigDecimal();
+        } catch (InputMismatchException exception) {
+            System.out.println("Km's incorrectos, vuelva a intentar ingresar la emergencia. \n");
+            this.ingresarEmergencia();
+        }
+        if(cantPacientes > 0 && cantKm.compareTo(BigDecimal.ZERO) == 1) {
+            Viaje viaje = new Viaje(cantPacientes, cantKm, dateTime);
+            Emergencia emergencia = new Emergencia(viaje);
+            System.out.println("Se notificará: " + emergencia);
 
-        Viaje viaje = new Viaje(cantPacientes, cantKm, dateTime);
-        Emergencia emergencia = new Emergencia(viaje);
-        System.out.println("Se notificará: " + emergencia);
-
-        this.clinica.getSat().notificar(emergencia);
-        this.iniciarSistema(this.clinica);
+            this.clinica.getSat().notificar(emergencia);
+            this.iniciarSistema(this.clinica);
+        } else {
+            System.out.println("Ingreso de datos erroneo. Ingrese los datos nuevamente \n");
+            this.ingresarEmergencia();
+        }
     }
 
     private void ingresarConsulta() {
         Paciente pacienteAAtender;
         IObraSocial obraSocialElegida;
         Consulta consulta;
-        Integer tipoDeCobertura;
-        Integer edad;
-        Integer dni;
-        Integer doctorSeleccionado;
+        Integer tipoDeCobertura = -1;
+        Integer edad = -1;
+        Integer dni = -1;
+        Integer doctorSeleccionado = -1;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("                           \\|||/");
         System.out.println("                           (o o)");
         System.out.println("------------------------ooO-(_)-Ooo------------------------");
         System.out.println("Ingresando consulta: ");
+
+        //COBERTURA
         System.out.println(" Seleccione la cobertura correpondiente: ");
         System.out.println("0 - Sin cobertura ");
-        Integer i;
+        int i;
         for(i = 0; i < clinica.getObrasSociales().size(); i++){
             System.out.println( (i+1)+" - "+clinica.getObrasSociales().get(i));
         }
-        tipoDeCobertura = sc.nextInt();
-        System.out.println("Usted eligió: " + tipoDeCobertura);
-        if (tipoDeCobertura != 0) {
+        try {
+            tipoDeCobertura = sc.nextInt();
+            System.out.println("Usted eligió: " + tipoDeCobertura);
+        } catch (InputMismatchException exception) {
+            System.out.println("Ingreso de dato erroneo. Intente cargar la consulta nuevamente \n");
+            this.ingresarConsulta();
+        }
+        if(tipoDeCobertura.compareTo(Integer.valueOf(0)) == 1) {
+        //if (tipoDeCobertura >  0) {
             obraSocialElegida = clinica.getObrasSociales().get(tipoDeCobertura-1);
         } else {
             obraSocialElegida = NullObraSocial.getInstance();
         }
+
+        //EDAD
         System.out.println(" Ingrese la edad del paciente: ");
-        edad = sc.nextInt();
+        try {
+            edad = sc.nextInt();
+        } catch (InputMismatchException exception) {
+            System.out.println("Ingreso de dato erroneo. Intente cargar la consulta nuevamente \n");
+            this.ingresarConsulta();
+        }
 
+        //DNI
         System.out.println(" Ingrese el dni del paciente: ");
-        dni = sc.nextInt();
+        try {
+            dni = sc.nextInt();
+        } catch (InputMismatchException exception) {
+            System.out.println("Ingreso de dato erroneo. Intente cargar la consulta nuevamente \n");
+            this.ingresarConsulta();
+        }
 
-        pacienteAAtender = PacienteFactory.getPaciente(dni, edad, obraSocialElegida);
-        consulta = ConsultaFactory.getConsulta(pacienteAAtender);
-
+        //DOCTOR
         System.out.println(" Seleccione el doctor que quiere que lo atienda: ");
         Integer j;
         for(j = 0; j < clinica.getDoctores().size(); j++){
             System.out.println( (j)+" - "+clinica.getDoctores().get(j).getId());
         }
-        doctorSeleccionado = sc.nextInt();
+        try {
+            doctorSeleccionado = sc.nextInt();
+        } catch (InputMismatchException exception) {
+            System.out.println("Ingreso de dato erroneo. Intente cargar la consulta nuevamente \n");
+            this.ingresarConsulta();
+        }
+        if ( edad <= -1 || dni <= -1 || tipoDeCobertura <= -1 || doctorSeleccionado <=-1) {
+            System.out.println("Ingreso de datos erroneo. Intente nuevamente \n");
+            this.ingresarConsulta();
+        } else {
+            pacienteAAtender = PacienteFactory.getPaciente(dni, edad, obraSocialElegida);
+            consulta = ConsultaFactory.getConsulta(pacienteAAtender);
+            Doctor doctor = clinica.getDoctores().get(doctorSeleccionado);
 
-        Doctor doctor = clinica.getDoctores().get(doctorSeleccionado);
-
-        System.out.println(" El doctor que la atenderá sera: " + doctor);
-        System.out.println(consulta);
-        doctor.atender(consulta);
-
-        this.iniciarSistema(this.clinica);
+            System.out.println(" El doctor que la atenderá sera: " + doctor);
+            System.out.println(consulta);
+            doctor.atender(consulta);
+            this.iniciarSistema(this.clinica);
+        }
     }
 
     private void calcularSueldo() {
@@ -144,22 +193,21 @@ public class Consola {
         System.out.println("                           (o o)");
         System.out.println("------------------------ooO-(_)-Ooo------------------------");
         System.out.println("Los sueldos de los empleados son: ");
-        Integer i;
+        int i;
         for(i = 0; i < clinica.getDoctores().size(); i++){
             Doctor doctor = clinica.getDoctores().get(i);
             System.out.println("Doctor: "+doctor.getId()+" sueldo: "+clinica.getLiquidadorDeSueldo().calcular(doctor));
         }
-        Integer j;
+        int j;
         for(j = 0; j < clinica.getAdministrativos().size(); j++){
             Administrativo administrativo = clinica.getAdministrativos().get(j);
             System.out.println("Administrativo: "+administrativo.getId()+" sueldo: "+clinica.getLiquidadorDeSueldo().calcular(administrativo));
         }
-        Integer k;
+        int k;
         for(k = 0; k < clinica.getAdministrativos().size(); k++){
             Camillero camillero = clinica.getCamilleros().get(k);
             System.out.println("Camillero: "+camillero.getId()+" sueldo: "+clinica.getLiquidadorDeSueldo().calcular(camillero));
         }
-
         this.iniciarSistema(this.clinica);
     }
 }

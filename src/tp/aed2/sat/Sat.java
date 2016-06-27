@@ -6,6 +6,10 @@ public class Sat extends EmergenciaPublisher {
 
     private Sat() {}
 
+    /**
+     *
+     * @return Devuelve una instancia del SAT, si no existe, la crea
+     */
     public static Sat getInstance() {
         if(instance == null) {
             instance = new Sat();
@@ -13,6 +17,11 @@ public class Sat extends EmergenciaPublisher {
         return instance;
     }
 
+    /**
+     *
+     * @param emergencia: Se realiza la notificación EN PARALELO de la emergencia a todos los suscriptores
+     *                  y se espera a que alguno la tome
+     */
     @Override
     public void notificar(Emergencia emergencia) {
         System.out.println("Notificando la emergencia a " + suscriptores.size() + " camilleros.");

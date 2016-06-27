@@ -15,6 +15,11 @@ public class NullObraSocial implements IObraSocial  {
     private NullObraSocial() {}
 
     //Métodos
+
+    /**
+     *
+     * @return Devuelve una instancia de NULLObraSocial, si no existe una, la crea
+     */
     public static NullObraSocial getInstance() {
         if(instance == null) {
             instance = new NullObraSocial();
@@ -22,18 +27,34 @@ public class NullObraSocial implements IObraSocial  {
         return instance;
     }
 
+    /**
+     *
+     * @return Devuelve "NO_OS"
+     */
     public String getId() {
         return NAME;
     }
 
+    /**
+     *
+     * @return Devuelve Cero, que es el porcentaje que se le descuenta a los pacientes por la consulta
+     */
     public BigDecimal getPorcentaje() {
         return CERO;
     }
 
+    /**
+     *
+     * @return Devuelve siempre false porque la clínica sólo cubre obras sociales
+     */
     public Boolean cubre() {
         return false;
     }
 
+    /**
+     *
+     * @return Devuelve el String "Sin Cobertura"
+     */
     @Override
     public String toString() {
         return "[Sin Cobertura]";

@@ -5,13 +5,12 @@ import tp.aed2.consultas.Consulta;
 import tp.aed2.empleados.Administrativo;
 import tp.aed2.empleados.Camillero;
 import tp.aed2.empleados.Doctor;
-import tp.aed2.excepciones.EmpleadoNoTrabajoException;
 import tp.aed2.liquidador.LiquidadorDeSueldo;
+import tp.aed2.viajes.Viaje;
 
 import java.math.BigDecimal;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class LiquidadorTest {
 
@@ -106,6 +105,78 @@ public class LiquidadorTest {
         Camillero camillero = new Camillero("Camillero");
         BigDecimal sueldo = liquidador.calcular(camillero);
         BigDecimal expected = camillero.getSueldoBasico();
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroQueRealizoViajes() {
+        Camillero camillero = new Camillero("Camillero");
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico();
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroConViajeRealizadoUnDiaDeSemanaConUnPaciente() {
+        Camillero camillero = new Camillero("Camillero");
+        Viaje viaje = Fixture.getViajeDeUnPacienteEnDiaDeSemana();
+        camillero.agregarViaje(viaje);
+        BigDecimal km = liquidador.getValorKm().multiply(viaje.getKilometros());
+        BigDecimal valorViaje = liquidador.getValorViaje();
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico().add(km).add(valorViaje);
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroConDosViajesRealizadoUnDiaDeSemanaConUnPaciente() {
+        Camillero camillero = new Camillero("Camillero");
+        Viaje viaje = Fixture.getViajeDeUnPacienteEnDiaDeSemana();
+        camillero.agregarViaje(viaje);
+        camillero.agregarViaje(viaje);
+        BigDecimal km = liquidador.getValorKm().multiply(viaje.getKilometros());
+        BigDecimal valorViaje = liquidador.getValorViaje().add(km);
+        BigDecimal valorTotal = valorViaje.multiply(new BigDecimal(2));
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico().add(valorTotal);
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroConViajeRealizadoUnDiaDeSemanaConMasDeUnPaciente() {
+        Camillero camillero = new Camillero("Camillero");
+        Viaje viaje = Fixture.getViajeDeDosPacientesEnDiaDeSemana();
+        camillero.agregarViaje(viaje);
+        BigDecimal km = liquidador.getValorKm().multiply(viaje.getKilometros());
+        BigDecimal valorViaje = liquidador.getValorViaje().add(liquidador.getValorAdicionalPaciente());
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico().add(km).add(valorViaje);
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroConViajeRealizadoUnFinDeSemanaUnPaciente() {
+        Camillero camillero = new Camillero("Camillero");
+        Viaje viaje = Fixture.getViajeDeUnPacienteEnFinDeSemana();
+        camillero.agregarViaje(viaje);
+        BigDecimal km = liquidador.getValorKm().multiply(viaje.getKilometros());
+        BigDecimal total = (liquidador.getValorViaje().add(km)).multiply(liquidador.getPlusFinDeSemana());
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico().add(total);
+        assertEquals(expected, sueldo);
+    }
+
+    @Test
+    public void calcularCamilleroConViajeRealizadoUnFinDeSemanaConMasDeUnPaciente() {
+        Camillero camillero = new Camillero("Camillero");
+        Viaje viaje = Fixture.getViajeDeDosPacientesEnFinDeSemana();
+        camillero.agregarViaje(viaje);
+        BigDecimal km = liquidador.getValorKm().multiply(viaje.getKilometros());
+        BigDecimal adicionalPaciente = liquidador.getValorAdicionalPaciente();
+        BigDecimal valorViaje = liquidador.getValorViaje().add(adicionalPaciente).add(km);
+        BigDecimal total = valorViaje.multiply(liquidador.getPlusFinDeSemana());
+        BigDecimal sueldo = liquidador.calcular(camillero);
+        BigDecimal expected = camillero.getSueldoBasico().add(total);
         assertEquals(expected, sueldo);
     }
 

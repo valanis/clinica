@@ -10,6 +10,13 @@ public abstract class Paciente {
     protected IObraSocial os;
 
     //Constructor
+
+    /**
+     *
+     * @param os Obra social del paciente, puede ser un NullObraSocial si el paciente no dispone de una
+     * @param dni del paciente
+     * @param edad del paciente
+     */
     public Paciente(IObraSocial os, Integer dni, Integer edad) {
         this.os = os;
         this.dni = dni;
